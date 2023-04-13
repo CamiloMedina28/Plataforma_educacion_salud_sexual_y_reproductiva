@@ -1,0 +1,63 @@
+//colores del documento 
+$color_de_fondo: #F4F3F8;
+$color_letras: #333333;
+$color_titulo:  rgba(220,1,85,1);
+
+//mixins
+@mixin caracteristicas_elementos_navegacion ($width, $right){
+    width: $width;
+    color: $color_letras;
+    position: absolute;
+    top: 0px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 18px;
+    opacity: 1;
+    right: $right;
+    text-align: left;
+}
+
+//fuentes
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+//Características del body para la página de inicio.
+body{
+    position: relative;
+    max-width: 1780px;
+    max-height: 1752px;
+    background-color: $color_de_fondo;
+}
+
+.barra_de_navegacion{
+    position: relative;
+    float: right;
+    width: 100%;
+    height: 158px;
+    top: 10px;
+    margin-right: 15px;
+}
+
+#elementos_del_menu #inicio{
+    @include caracteristicas_elementos_navegacion(48px,315px);
+}
+
+#elementos_del_menu #publicaciones{
+    @include caracteristicas_elementos_navegacion(126px,165px);
+}
+
+#elementos_del_menu #nosotros{
+    @include caracteristicas_elementos_navegacion(136px, 5px);
+}
+
+#titulo{
+    width: 671px;
+    color: $color_titulo;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    font-family: Poppins;
+    font-weight: SemiBold;
+    font-size: 36px;
+    opacity: 1;
+    text-align: left;
+}
