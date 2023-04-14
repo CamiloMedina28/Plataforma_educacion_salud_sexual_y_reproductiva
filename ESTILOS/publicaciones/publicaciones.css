@@ -1,1 +1,138 @@
-/*# sourceMappingURL=publicaciones.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  position: relative;
+  max-width: 1780px;
+  max-height: 1752px;
+  background-color: #F4F3F8;
+}
+
+nav a:link {
+  text-decoration: none;
+  color: #333333;
+}
+
+nav a:visited {
+  text-decoration: none;
+  color: #333333;
+}
+
+.barra_de_navegacion {
+  position: relative;
+  float: right;
+  width: 100%;
+  height: 158px;
+  top: 10px;
+  margin-right: 15px;
+}
+
+#elementos_del_menu #inicio {
+  width: 48px;
+  color: #333333;
+  position: absolute;
+  top: 0px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 18px;
+  opacity: 1;
+  right: 315px;
+  text-align: left;
+}
+
+#elementos_del_menu #inicio::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: #F4F3F8;
+  bottom: -3px;
+  width: 44px;
+  transition-duration: 0.5s;
+}
+
+#elementos_del_menu #inicio:hover::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: rgb(220, 1, 85);
+  bottom: -3px;
+  width: 44px;
+  transition-duration: 0.5s;
+}
+
+#elementos_del_menu #publicaciones {
+  width: 126px;
+  color: #333333;
+  position: absolute;
+  top: 0px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 18px;
+  opacity: 1;
+  right: 165px;
+  text-align: left;
+}
+
+#elementos_del_menu #publicaciones::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: #F4F3F8;
+  bottom: -3px;
+  width: 122px;
+  transition-duration: 0.5s;
+}
+
+#elementos_del_menu #publicaciones:hover::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: rgb(220, 1, 85);
+  bottom: -3px;
+  width: 122px;
+  transition-duration: 0.5s;
+}
+
+#elementos_del_menu #nosotros {
+  width: 136px;
+  color: #333333;
+  position: absolute;
+  top: 0px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 18px;
+  opacity: 1;
+  right: 5px;
+  text-align: left;
+}
+
+#elementos_del_menu #nosotros::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: #F4F3F8;
+  bottom: -3px;
+  width: 132px;
+  transition-duration: 0.5s;
+}
+
+#elementos_del_menu #nosotros:hover ::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: rgb(220, 1, 85);
+  bottom: -3px;
+  width: 132px;
+  transition-duration: 0.5s;
+}
+
+#titulo {
+  width: 671px;
+  color: rgb(220, 1, 85);
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  font-family: Poppins;
+  font-weight: SemiBold;
+  font-size: 25px;
+  opacity: 1;
+  text-align: left;
+}/*# sourceMappingURL=publicaciones.css.map */

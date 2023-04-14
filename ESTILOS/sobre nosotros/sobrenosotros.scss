@@ -1,0 +1,101 @@
+//colores del documento 
+$color_de_fondo: #F4F3F8;
+$color_letras: #333333;
+$color_titulo:  rgba(220,1,85,1);
+
+//mixins
+@mixin caracteristicas_elementos_navegacion ($width, $right){
+    width: $width;
+    color: $color_letras;
+    position: absolute;
+    top: 0px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 18px;
+    opacity: 1;
+    right: $right;
+    text-align: left;
+    
+}
+
+@mixin seudoclase_menu ($width, $color){
+    position: absolute;
+    content: '';
+    border: solid;
+    border-color: $color;
+    bottom: -3px;
+    width: $width;
+    transition-duration: 0.5s;
+}
+//fuentes
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+//Características del body para la página de inicio.
+body{
+    position: relative;
+    max-width: 1780px;
+    max-height: 1752px;
+    background-color: $color_de_fondo;
+}
+
+nav a:link {
+    text-decoration: none;
+    color: $color_letras;
+}
+
+nav a:visited {
+    text-decoration: none;
+    color: $color_letras;
+}
+
+.barra_de_navegacion{
+    position: relative;
+    float: right;
+    width: 100%;
+    height: 158px;
+    top: 10px;
+    margin-right: 15px;
+}
+
+#elementos_del_menu #inicio{
+    @include caracteristicas_elementos_navegacion(48px,315px);
+}
+#elementos_del_menu #inicio::before{
+    @include seudoclase_menu(44px, $color_de_fondo);
+}
+#elementos_del_menu #inicio:hover::before{
+    @include seudoclase_menu(44px, $color_titulo);
+}
+
+#elementos_del_menu #publicaciones{
+    @include caracteristicas_elementos_navegacion(126px,165px);
+}
+#elementos_del_menu #publicaciones::before{
+    @include seudoclase_menu (122px, $color_de_fondo);
+}
+#elementos_del_menu #publicaciones:hover::before{
+    @include seudoclase_menu (122px, $color_titulo);
+}
+
+#elementos_del_menu #nosotros{
+    @include caracteristicas_elementos_navegacion(136px, 5px);
+}
+#elementos_del_menu #nosotros::before{
+    @include seudoclase_menu (132px, $color_de_fondo);
+}
+#elementos_del_menu #nosotros:hover ::before{
+    @include seudoclase_menu (132px, $color_titulo);
+}
+
+#titulo{
+    width: 671px;
+    color: $color_titulo;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    font-family: Poppins;
+    font-weight: SemiBold;
+    font-size: 25px;
+    opacity: 1;
+    text-align: left;
+}
