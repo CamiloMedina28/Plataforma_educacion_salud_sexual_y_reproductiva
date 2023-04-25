@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 body {
+  width: 100%;
   position: relative;
   background-color: #F4F3F8;
   font-size: 16px;
@@ -110,7 +111,7 @@ nav a:visited {
   border: solid;
   border-color: #F4F3F8;
   bottom: -3px;
-  width: 110px;
+  width: 108px;
   transition-duration: 0.5s;
 }
 
@@ -120,7 +121,7 @@ nav a:visited {
   border: solid;
   border-color: rgb(220, 1, 85);
   bottom: -3px;
-  width: 110px;
+  width: 108px;
   transition-duration: 0.5s;
 }
 
@@ -186,4 +187,28 @@ nav a:visited {
   border-radius: 50%;
   top: 55vh;
   filter: blur(75px);
+}
+
+.icono_menu {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .barra_de_navegacion {
+    top: -45px;
+    right: 30px;
+  }
+  .icono_menu {
+    display: block;
+  }
+  .icono_menu .boton {
+    top: -15px;
+    display: block;
+    padding: 20px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    float: right;
+  }
 }/*# sourceMappingURL=inicio.css.map */

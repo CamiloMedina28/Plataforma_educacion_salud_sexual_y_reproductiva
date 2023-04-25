@@ -45,6 +45,7 @@ $color_titulo:  rgba(220,1,85,1);
 
 //Características del body para la página de inicio.
 body{
+    width: 100%;
     position: relative;
     background-color: $color_de_fondo;
     font-size: 16px;
@@ -93,10 +94,10 @@ nav a:visited {
     @include caracteristicas_elementos_navegacion(130px, 5px);
 }
 .barra_de_navegacion #elementos_del_menu #nosotros::before{
-    @include seudoclase_menu (110px, $color_de_fondo);
+    @include seudoclase_menu (108px, $color_de_fondo);
 }
 .barra_de_navegacion #elementos_del_menu #nosotros:hover ::before{
-    @include seudoclase_menu (110px, $color_titulo);
+    @include seudoclase_menu (108px, $color_titulo);
 }
 
 #titulo{
@@ -145,4 +146,28 @@ nav a:visited {
 .aviso_principal #sombras2{
     right: 5px;
     @include sombras(35%, 200px, 55vh, 75px)
+}
+
+.icono_menu{
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+    .barra_de_navegacion{
+        top: -45px;
+        right: 30px;
+    }
+    .icono_menu{
+        display: block;
+    }
+    .icono_menu .boton{
+        top: -15px;
+        display:block;
+		padding:20px;
+		color:#000;
+		text-decoration:none;
+		font-weight: bold;
+		font-size:25px;
+        float: right;
+    }
 }
