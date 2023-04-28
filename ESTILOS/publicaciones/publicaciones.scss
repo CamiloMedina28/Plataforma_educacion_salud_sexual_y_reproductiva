@@ -1,7 +1,7 @@
 //colores del documento 
 $color_de_fondo: #F4F3F8;
 $color_letras: #333333;
-$color_titulo:  rgba(220,1,85,1);
+$color_magenta:  rgba(220,1,85,1);
 
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -37,12 +37,18 @@ $color_titulo:  rgba(220,1,85,1);
     text-transform: uppercase;
     vertical-align: middle;
     text-align: center;
-    background-color: $color_titulo;
+    background-color: $color_magenta;
     height:25px;
 	width:$width;
 	float:left;
     margin: 10px;
     margin-top: $top;
+}
+
+@mixin publicaciones(){
+    width: 50%;
+    height: auto;
+    margin: 10px 0 0 30px;
 }
 //fuentes
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -85,7 +91,7 @@ nav a:visited {
     @include seudoclase_menu(36px, $color_de_fondo);
 }
 #elementos_del_menu #inicio:hover::before{
-    @include seudoclase_menu(36px, $color_titulo);
+    @include seudoclase_menu(36px, $color_magenta);
 }
 
 #elementos_del_menu #publicaciones{
@@ -95,7 +101,7 @@ nav a:visited {
     @include seudoclase_menu (103px, $color_de_fondo);
 }
 #elementos_del_menu #publicaciones:hover::before{
-    @include seudoclase_menu (103px, $color_titulo);
+    @include seudoclase_menu (103px, $color_magenta);
 }
 
 #elementos_del_menu #nosotros{
@@ -105,12 +111,12 @@ nav a:visited {
     @include seudoclase_menu (108px, $color_de_fondo);
 }
 #elementos_del_menu #nosotros:hover ::before{
-    @include seudoclase_menu (108px, $color_titulo);
+    @include seudoclase_menu (108px, $color_magenta);
 }
 
 #titulo{
     max-width: 671px;
-    color: $color_titulo;
+    color: $color_magenta;
     position: absolute;
     top: 0px;
     left: 30px;
@@ -132,7 +138,7 @@ nav a:visited {
 
 .publicaciones #titulo_publicaciones{
     font-size: 60px;
-    color: $color_titulo;
+    color: $color_magenta;
     font-family: Bebas Neue;
 
 }
@@ -147,8 +153,8 @@ nav a:visited {
 .publicaciones #formulario_busqueda input[type="search"]{
 	width:300px;
     height: 30px;
-    border:1px solid $color_titulo;
-    color: $color_titulo;
+    border:1px solid $color_magenta;
+    color: $color_magenta;
 	border-radius:4px;
 	margin:8px 0;
 	display:inline-block;
@@ -158,14 +164,14 @@ nav a:visited {
 	width: 85px;
     text-align: center;
     height: 30px;
-	border:1px solid $color_titulo;
+	border:1px solid $color_magenta;
 	border-radius:5px;
 	color:$color_de_fondo;
-	background-color: $color_titulo;
+	background-color: $color_magenta;
 } 
 
 ::placeholder{
-    color: $color_titulo;
+    color: $color_magenta;
     opacity: 0.5;
 }
 
@@ -205,8 +211,8 @@ nav a:visited {
 
 .elementos_aside{
     display: block;
-    background-color: $color_titulo;
-    height: auto;
+    background-color: $color_magenta;
+    height: 100%;
     float: right;
     margin-top: 250px;
     width: 25%;
@@ -229,7 +235,7 @@ nav a:visited {
 
 .divisores_aside{
     opacity: 0.8;
-    color: $color_titulo;
+    color: $color_magenta;
     width: 92%;
 }
 
@@ -238,6 +244,25 @@ nav a:visited {
 }
 
 
+.posts{
+    position: absolute;
+    margin-top: 255px;
+}
+.publicaciones1{
+    @include publicaciones();
+}
+.publicaciones2{
+    @include publicaciones();
+}
+.publicaciones3{
+    @include publicaciones();
+}
+
+.posts .publicaciones #imagenes_posts{
+    width: 80%;
+    max-width: 466px;
+    max-height: 316px;
+}
 
 //elementos cambiantes para responsive.
 @media screen and (max-width: 800px) {
@@ -259,18 +284,18 @@ nav a:visited {
     #items_navegacion4{
         @include items_navegacion(0,100%);
     }
-
-
-
     .elementos_aside{
         position: absolute;
-        background-color: $color_titulo;
+        background-color: $color_magenta;
         height: auto;
         float: right;
         margin-bottom: 0px;
         margin-top: 100%;
         width:100%;
         display:flex;
+    }
+    .divisores_aside{
+        display: none;
     }
 }
 

@@ -270,7 +270,7 @@ nav a:visited {
 .elementos_aside {
   display: block;
   background-color: rgb(220, 1, 85);
-  height: auto;
+  height: 100%;
   float: right;
   margin-top: 250px;
   width: 25%;
@@ -298,6 +298,35 @@ nav a:visited {
 
 .texto_aside {
   margin: 5px;
+}
+
+.posts {
+  position: absolute;
+  margin-top: 255px;
+}
+
+.publicaciones1 {
+  width: 50%;
+  height: auto;
+  margin: 10px 0 0 30px;
+}
+
+.publicaciones2 {
+  width: 50%;
+  height: auto;
+  margin: 10px 0 0 30px;
+}
+
+.publicaciones3 {
+  width: 50%;
+  height: auto;
+  margin: 10px 0 0 30px;
+}
+
+.posts .publicaciones #imagenes_posts {
+  width: 80%;
+  max-width: 466px;
+  max-height: 316px;
 }
 
 @media screen and (max-width: 800px) {
@@ -364,5 +393,8 @@ nav a:visited {
     margin-top: 100%;
     width: 100%;
     display: flex;
+  }
+  .divisores_aside {
+    display: none;
   }
 }/*# sourceMappingURL=publicaciones.css.map */
