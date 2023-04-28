@@ -30,6 +30,19 @@ $color_titulo:  rgba(220,1,85,1);
     width: $width;
     transition-duration: 0.5s;
 }
+
+@mixin items_navegacion($top, $width){
+    color: $color_de_fondo;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: center;
+    background-color: $color_titulo;
+    height:25px;
+	width:$width;
+	float:left;
+    margin: 10px;
+    margin-top: $top;
+}
 //fuentes
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
@@ -95,13 +108,13 @@ nav a:visited {
 }
 
 #titulo{
-    width: 671px;
+    max-width: 671px;
     color: $color_titulo;
     position: absolute;
     top: 0px;
+    left: 30px;
     font-family: Poppins;
-    font-weight: SemiBold;
-    font-size: 25px;
+    font-size: 2vmax;
     opacity: 1;
     text-align: left;
 }
@@ -162,27 +175,49 @@ nav a:visited {
     justify-content: space-between;
 }
 
-#items_navegacion{
-    color: $color_de_fondo;
-    text-transform: uppercase;
-    vertical-align: middle;
-    text-align: center;
-    background-color: $color_titulo;
-    height:25px;
-	width:25%;
-	float:left;
-	margin: 10px;
+
+#items_navegacion1{
+    @include items_navegacion(0,25%);
+}
+#items_navegacion2{
+    @include items_navegacion(0,25%);
+}
+#items_navegacion3{
+    @include items_navegacion(0,25%);
+}
+#items_navegacion4{
+    @include items_navegacion(0,25%);
 }
 
-
-#items_navegacion a:link {
+.navegacion a:link {
     vertical-align: middle;
     text-decoration: none;
     color: $color_de_fondo;
 }
 
-#items_navegacion a:visited {
+.navegacion a:visited {
     vertical-align: middle;
     text-decoration: none;
     color: $color_de_fondo;
+}
+
+@media screen and (max-width: 800px) {
+    .navegacion{
+        position: absolute;
+        margin-top: 200px;
+        width: 100%;
+        flex-direction: column;
+    }
+    #items_navegacion1{
+        @include items_navegacion(0,100%);
+    }
+    #items_navegacion2{
+        @include items_navegacion(0,100%);
+    }
+    #items_navegacion3{
+        @include items_navegacion(0,100%);
+    }
+    #items_navegacion4{
+        @include items_navegacion(0,100%);
+    }
 }

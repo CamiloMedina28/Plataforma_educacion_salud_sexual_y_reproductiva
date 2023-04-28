@@ -187,3 +187,24 @@ nav a:visited {
 }
 
 
+.contenidos{
+    position: absolute;
+    margin-top: 280px;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+#items{
+    font-family: Bebas Neue;
+    border-radius: 15px;
+    color: $color_de_fondo;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: center;
+    background-color: $color_titulo;
+    height: 260px;
+	width:25%;
+	float:left;
+	margin: 30px;
+}

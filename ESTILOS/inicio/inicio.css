@@ -227,4 +227,26 @@ nav a:visited {
 ::placeholder {
   color: rgb(220, 1, 85);
   opacity: 0.5;
+}
+
+.contenidos {
+  position: absolute;
+  margin-top: 280px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#items {
+  font-family: Bebas Neue;
+  border-radius: 15px;
+  color: #F4F3F8;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  background-color: rgb(220, 1, 85);
+  height: 260px;
+  width: 25%;
+  float: left;
+  margin: 30px;
 }/*# sourceMappingURL=inicio.css.map */
