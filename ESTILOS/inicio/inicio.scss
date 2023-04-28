@@ -152,22 +152,38 @@ nav a:visited {
     display: none;
 }
 
-@media screen and (max-width: 800px){
-    .barra_de_navegacion{
-        top: -45px;
-        right: 30px;
-    }
-    .icono_menu{
-        display: block;
-    }
-    .icono_menu .boton{
-        top: -15px;
-        display:block;
-		padding:20px;
-		color:#000;
-		text-decoration:none;
-		font-weight: bold;
-		font-size:25px;
-        float: right;
-    }
+
+
+
+.dudas{
+    top: 37rem;
+    position: absolute;
+    width:300px;
+	margin: 0 0 0 30px;
 }
+
+.dudas input[type="text"]{
+	width:300px;
+    height: 30px;
+    border:1px solid $color_titulo;
+    color: $color_titulo;
+	border-radius:4px;
+	margin:8px 0;
+}
+
+.dudas input[type="submit"]{
+	width: 85px;
+    text-align: center;
+    height: 30px;
+	border:1px solid $color_titulo;
+	border-radius:5px;
+	color:$color_de_fondo;
+	background-color: $color_titulo;
+} 
+
+::placeholder{
+    color: $color_titulo;
+    opacity: 0.5;
+}
+
+
