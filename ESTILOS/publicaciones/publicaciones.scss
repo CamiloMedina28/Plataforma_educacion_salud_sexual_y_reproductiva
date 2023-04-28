@@ -5,6 +5,7 @@ $color_titulo:  rgba(220,1,85,1);
 
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 //mixins
 @mixin caracteristicas_elementos_navegacion ($width, $right){
@@ -132,6 +133,7 @@ nav a:visited {
 .publicaciones #titulo_publicaciones{
     font-size: 60px;
     color: $color_titulo;
+    font-family: Bebas Neue;
 
 }
 
@@ -139,7 +141,7 @@ nav a:visited {
     position: relative;
     right: 35px;
     float: right;
-    top: -120px;
+    margin-top: -120px;
 }
 
 .publicaciones #formulario_busqueda input[type="search"]{
@@ -201,6 +203,43 @@ nav a:visited {
     color: $color_de_fondo;
 }
 
+.elementos_aside{
+    display: block;
+    background-color: $color_titulo;
+    height: auto;
+    float: right;
+    margin-top: 250px;
+    width: 25%;
+}
+
+
+.elementos_aside #titulo_aside{
+    margin-left: 25px;
+    font-family: roboto;
+    color: $color_de_fondo;
+}
+
+.elementos_aside #podcast #doly{
+    position: relative;
+    left: 8%;
+    width: 85%;
+    max-width: 348px;
+    max-height: 196px;
+}
+
+.divisores_aside{
+    opacity: 0.8;
+    color: $color_titulo;
+    width: 92%;
+}
+
+.texto_aside{
+    margin: 5px;
+}
+
+
+
+//elementos cambiantes para responsive.
 @media screen and (max-width: 800px) {
     .navegacion{
         position: absolute;
@@ -220,4 +259,18 @@ nav a:visited {
     #items_navegacion4{
         @include items_navegacion(0,100%);
     }
+
+
+
+    .elementos_aside{
+        position: absolute;
+        background-color: $color_titulo;
+        height: auto;
+        float: right;
+        margin-bottom: 0px;
+        margin-top: 100%;
+        width:100%;
+        display:flex;
+    }
 }
+
