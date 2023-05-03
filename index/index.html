@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./tablet.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="./laptop.css" media="screen and (min-width: 1024px)">
+    <title>SexSmart</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">SexSmart</h1>
+        <input type="checkbox" class="checkbox" id="menu-toogle">
+        <label for="menu-toogle" class="menu-toogle"></label>
+        <nav class="nav"> 
+                <a href="./index.html" class="nav__item">Inicio</a>
+                <a href="" class="nav__item">Publicaciones</a>
+                <a href="" class="nav__item">Sobre Nosotros</a>
+        </nav>
+    </header>
+    <main>
+        <section class="landing">
+            <div class="titular">
+                <h1 class="enunciado">¡ACLARA TUS DUDAS DE SALUD SEXUAL Y REPRODUCTIVA!</h1>
+                <form action="" class="busqueda-form">
+                    <label for="" class="busqueda">
+                        <input type="text" placeholder="¿TIENES UNA DUDA?" class="busqueda__input">
+                        <button class="busqueda__btn">Buscar</button>
+                    </label>
+                </form> 
+            </div>
+            <figure>
+                <picture>
+                    <source media="(min-width: 768px)" srcset="./img/preservativos-main.png">
+                    <img src="" alt=""class="preservativos-img">
+                </picture>
+            </figure>
+        </section>
+        <section class="temas">
+            <figure class="temas__contenedor">
+                <img src="./img/anticonceptivo.png" alt="Anticonceptivo">
+                <figcaption>Métodos Anticonceptivo</figcaption>
+            </figure>
+            <figure class="temas__contenedor">
+                <img src="./img/enfermedad-de-transmision-sexual.png" alt="Enfermedades de Transmisión Sexual">
+                <figcaption>Enfermedades de Transmisión Sexual</figcaption>
+            </figure>
+            <figure class="temas__contenedor">
+                <img src="./img/embarazada.png" alt="Embarazada">
+                <figcaption>Embarazo Seguro y Deseado</figcaption>
+            </figure>
+        </section>
+        <section class="crear-cuenta">
+            <h1>¡Crea tu cuenta!</h1>
+            <form action="">
+                <label for="">
+                    <input type="text" placeholder="Nombre" class="cuenta__input">
+                    <input type="text" placeholder="Telefono" class="cuenta__input">
+                    <input type="text" placeholder="Correo" class="cuenta__input">
+                </label>
+            </form>
+            <button class="cuenta__btn">Registrarse</button>
+        </section>
+    </main>
+</body>
+</html>
