@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 body {
@@ -125,6 +126,34 @@ nav a:visited {
   transition-duration: 0.5s;
 }
 
+.menu-toogle {
+  display: none;
+  position: absolute; /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
+  width: 35px;
+  line-height: 1.1;
+  text-align: center;
+  top: 6.5px; /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
+  right: 8px;
+  border-radius: 3px;
+  background-color: rgb(220, 1, 85);
+}
+
+/*Añadimos la haburguesa y le damos unos estilos*/
+.menu-toogle::before {
+  content: "☰";
+  font-size: 32px;
+  color: white;
+}
+
+.checkbox {
+  display: none; /*Ocultamos el checkbox pues no nos interesa que se vea*/
+}
+
+.checkbox:checked ~ .nav {
+  right: 0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
+  display: flex;
+}
+
 #titulo {
   max-width: 671px;
   color: rgb(220, 1, 85);
@@ -143,14 +172,15 @@ nav a:visited {
 }
 
 .aviso_principal #aviso {
-  max-width: 784px;
+  max-width: 745px;
+  max-height: 450px;
   position: absolute;
   height: auto;
   color: rgb(220, 1, 85);
   top: 100px;
   left: 30px;
   font-family: Bebas Neue;
-  font-size: 8vw;
+  font-size: 7vw;
   text-align: left;
 }
 
@@ -189,8 +219,65 @@ nav a:visited {
   filter: blur(75px);
 }
 
-.icono_menu {
-  display: none;
+.busqueda-form {
+  margin-top: 20px;
+}
+
+.busqueda {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.busqueda__input {
+  height: 30px;
+  width: 65%;
+  max-width: 400px;
+  border: 2px solid rgb(220, 1, 85);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.busqueda__input::-moz-placeholder {
+  color: rgb(220, 1, 85);
+}
+
+.busqueda__input::placeholder {
+  color: rgb(220, 1, 85);
+}
+
+.busqueda__btn {
+  height: 30px;
+  width: 25%;
+  max-width: 150px;
+  padding: 0 1px;
+  background-color: va rgb(220, 1, 85);
+  color: whitesmoke;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 2px solid rgb(220, 1, 85);
+}
+
+.temas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 30px 25px;
+}
+
+.temas__contenedor {
+  background-color: var(--primary-color);
+  word-wrap: break-word;
+  width: 80%;
+  max-width: 225px;
+  margin: 15px 0;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  border-radius: 25px;
+}
+
+.temas__contenedor img {
+  width: 90%;
 }
 
 .dudas {
@@ -249,4 +336,76 @@ nav a:visited {
   width: 25%;
   float: left;
   margin: 30px;
+}
+
+@media screen and (min-width: 1700px) {
+  .aviso_principal #aviso {
+    font-size: 120px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .busqueda-form {
+    padding-top: 230px;
+  }
+}
+.busqueda-form {
+  margin-top: 50px;
+}
+
+.busqueda {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.busqueda__input {
+  height: 30px;
+  width: 65%;
+  max-width: 400px;
+  border: 2px solid rgb(220, 1, 85);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.busqueda__input::-moz-placeholder {
+  color: rgb(220, 1, 85);
+}
+
+.busqueda__input::placeholder {
+  color: rgb(220, 1, 85);
+}
+
+.busqueda__btn {
+  height: 30px;
+  width: 25%;
+  max-width: 150px;
+  padding: 0 1px;
+  background-color: rgb(220, 1, 85);
+  color: whitesmoke;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 2px solid rgb(220, 1, 85);
+}
+
+.temas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 25px;
+  padding: 80px 25px;
+}
+
+.temas__contenedor {
+  background-color: rgb(220, 1, 85);
+  word-wrap: break-word;
+  width: 80%;
+  max-width: 225px;
+  margin: 15px 0;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  border-radius: 25px;
+}
+
+.temas__contenedor img {
+  width: 90%;
 }/*# sourceMappingURL=inicio.css.map */

@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link href="../ESTILOS/inicio/inicio.css" rel="stylesheet" type="text/css">
+    <link href="../ESTILOS/media_query/tablet/tablet.css" rel="stylesheet" type="text/css" media="screen and (max-width: 768px)">
 </head>
 <body>
     <main>
         <header>
+            <input type="checkbox" class="checkbox" id="menu-toogle">
+            <label for="menu-toogle" class="menu-toogle"></label>
+
             <nav class="barra_de_navegacion">
                 <div id="elementos_del_menu">
                     <span id="inicio"><a href="../HTML/INICIO.html">Inicio</a></span>
@@ -29,30 +34,29 @@
                 <div id="sombras2"></div>
             </section>
             <section>
-                <form action="" class="dudas">
-                    <input type="text" placeholder="¿TIENES UNA DUDA SOBRE SEXUALIDAD?">
-                    <input type="submit" value="ENVIAR">
-                </form>
+                <form action="" class="busqueda-form">
+                    <label for="" class="busqueda">
+                        <input type="text" placeholder="¿TIENES UNA DUDA?" class="busqueda__input">
+                        <button class="busqueda__btn">Buscar</button>
+                    </label>
+                </form> 
             </section>
         </header>
 
         <article>
-            <section class="contenidos">
-                <div id="items">
-                    <img src="../IMAGENES/Pagina de inicio/anticonceptivo.png" alt="Imágen de los métodos Anticonceptivos">
-                    <p>Métodos <br> Anticonceptivos
-                    </p>
-                </div>
-
-                <div id="items">
-                    <img src="../IMAGENES/Pagina de inicio/enfermedad-de-transmision-sexual.png" alt="Imagen enfermedad de transmision sexual">
-                    <p>Enfermedades de <br> transmisión sexual</p>
-                </div>
-
-                <div id="items">
-                    <img src="../IMAGENES/Pagina de inicio/embarazada.png" alt="Imagen embarazo seguro">
-                    <p>Embarazo deseado <br> y seguro</p>
-                </div>
+            <section class="temas">
+                <figure class="temas__contenedor">
+                    <img src="../IMAGENES/Pagina de inicio/anticonceptivo.png" alt="Anticonceptivo">
+                    <figcaption>Métodos Anticonceptivo</figcaption>
+                </figure>
+                <figure class="temas__contenedor">
+                    <img src="../IMAGENES/Pagina de inicio/enfermedad-de-transmision-sexual.png" alt="Enfermedades de Transmisión Sexual">
+                    <figcaption>Enfermedades de Transmisión Sexual</figcaption>
+                </figure>
+                <figure class="temas__contenedor">
+                    <img src="../IMAGENES/Pagina de inicio/embarazada.png" alt="Embarazada">
+                    <figcaption>Embarazo Seguro y Deseado</figcaption>
+                </figure>
             </section>
         </article>
     </main>
