@@ -1,0 +1,123 @@
+//colores del documento 
+$color_de_fondo: #F4F3F8;
+$color_letras: #333333;
+$color_titulo:  rgba(220,1,85,1);
+//mixins
+@mixin  elementos_menu(){
+    /*Estilos de los li del menú*/
+    text-decoration: none;
+    font-family: Poppins;
+    color:white;
+}
+
+//imports
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+//parámetros generales
+.barra_de_navegacion #elementos_del_menu{
+    position: absolute;
+    display:none;
+    align-items: center;
+    width:300px;
+    height:350px;
+    background-color: $color_titulo;
+}
+
+#titulo{
+    max-width: 671px;
+    color: $color_titulo;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    font-family: Poppins;
+    font-size: 2vmax;
+    opacity: 1;
+    text-align: left;
+}
+
+main header .barra_de_navegacion #elementos_del_menu #inicio{
+    @include elementos_menu();
+}
+main header .barra_de_navegacion #elementos_del_menu #publicaciones{
+    @include elementos_menu();
+}
+main header .barra_de_navegacion #elementos_del_menu #nosotros{
+    @include elementos_menu();
+}
+main header .barra_de_navegacion #elementos_del_menu #inicio::before{
+    display: none;
+}
+main header .barra_de_navegacion #elementos_del_menu #publicaciones::before{
+    display: none;
+}
+main header .barra_de_navegacion #elementos_del_menu #nosotros::before{
+    display: none;
+}
+main header .barra_de_navegacion #elementos_del_menu #inicio:hover::before{
+    display: none;
+}
+main header .barra_de_navegacion #elementos_del_menu #publicaciones:hover::before{
+    display: none;
+}
+main header .barra_de_navegacion #elementos_del_menu #nosotros:hover::before{
+    display: none;
+}
+
+.menu-toogle {
+    display: block;
+    position:absolute; /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
+    width: 35px;
+    line-height:1.1;
+    text-align:center;
+    top: 0px; /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
+    right: 30px; 
+    border-radius:3px;
+    background-color: $color_titulo;
+}
+
+.menu-toogle::before {
+    content:"☰";
+    font-size:32px;
+    color:$color_de_fondo;
+    
+}
+.checkbox {
+    display:none; /*Ocultamos el checkbox pues no nos interesa que se vea*/
+}
+.checkbox:checked ~ .barra_de_navegacion #elementos_del_menu{
+    top: 45px;
+    right:0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
+    display: flex;
+}
+
+@mixin elementos_menu_checked($top, $right){
+    position: absolute;
+    font-size: xx-large;
+    justify-self: center;
+    margin-top: $top;
+    right: $right;
+}
+
+.barra_de_navegacion #elementos_del_menu a{
+    color: $color_de_fondo;
+}
+.checkbox:checked ~ .barra_de_navegacion #elementos_del_menu #inicio{
+    @include elementos_menu_checked(30px, 155px);
+}
+.checkbox:checked ~ .barra_de_navegacion #elementos_del_menu #publicaciones{
+    @include elementos_menu_checked(90px, 145px);
+}
+.checkbox:checked ~ .barra_de_navegacion #elementos_del_menu #nosotros{
+    @include elementos_menu_checked(160px, 85px);
+}
+
+.checkbox:checked ~ .aviso_principal .contenedor-imagen #imagen_preservativos{
+    visibility: hidden;
+}
+.checkbox:checked ~ .aviso_principal #aviso{
+    visibility: hidden;
+}
+.checkbox:checked ~ .aviso_principal #sombras1{
+    visibility: hidden;
+}
+
