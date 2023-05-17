@@ -1,6 +1,7 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 body {
   font-size: 16px;
   position: relative;
@@ -28,7 +29,7 @@ nav a:visited {
   float: right;
   width: 100%;
   height: auto;
-  top: 10px;
+  top: 0px;
   margin-right: 15px;
 }
 
@@ -144,9 +145,9 @@ nav a:visited {
 }
 
 .publicaciones {
-  top: 35px;
+  top: 40px;
   width: 100%;
-  height: 35px;
+  height: 45px;
   position: absolute;
   font-family: Roboto;
   left: 30px;
@@ -156,6 +157,15 @@ nav a:visited {
   font-size: 60px;
   color: rgb(220, 1, 85);
   font-family: Bebas Neue;
+}
+
+.checkbox {
+  display: block; /*Ocultamos el checkbox pues no nos interesa que se vea*/
+}
+
+.checkbox:checked ~ .nav {
+  right: 0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
+  display: flex;
 }
 
 .publicaciones #formulario_busqueda {
@@ -214,6 +224,7 @@ nav a:visited {
   float: left;
   margin: 10px;
   margin-top: 0;
+  display: block;
 }
 
 #items_navegacion2 {
@@ -227,6 +238,7 @@ nav a:visited {
   float: left;
   margin: 10px;
   margin-top: 0;
+  display: block;
 }
 
 #items_navegacion3 {
@@ -240,6 +252,7 @@ nav a:visited {
   float: left;
   margin: 10px;
   margin-top: 0;
+  display: block;
 }
 
 #items_navegacion4 {
@@ -253,6 +266,7 @@ nav a:visited {
   float: left;
   margin: 10px;
   margin-top: 0;
+  display: block;
 }
 
 .navegacion a:link {
@@ -327,74 +341,4 @@ nav a:visited {
   width: 80%;
   max-width: 466px;
   max-height: 316px;
-}
-
-@media screen and (max-width: 800px) {
-  .navegacion {
-    position: absolute;
-    margin-top: 200px;
-    width: 100%;
-    flex-direction: column;
-  }
-  #items_navegacion1 {
-    color: #F4F3F8;
-    text-transform: uppercase;
-    vertical-align: middle;
-    text-align: center;
-    background-color: rgb(220, 1, 85);
-    height: 25px;
-    width: 100%;
-    float: left;
-    margin: 10px;
-    margin-top: 0;
-  }
-  #items_navegacion2 {
-    color: #F4F3F8;
-    text-transform: uppercase;
-    vertical-align: middle;
-    text-align: center;
-    background-color: rgb(220, 1, 85);
-    height: 25px;
-    width: 100%;
-    float: left;
-    margin: 10px;
-    margin-top: 0;
-  }
-  #items_navegacion3 {
-    color: #F4F3F8;
-    text-transform: uppercase;
-    vertical-align: middle;
-    text-align: center;
-    background-color: rgb(220, 1, 85);
-    height: 25px;
-    width: 100%;
-    float: left;
-    margin: 10px;
-    margin-top: 0;
-  }
-  #items_navegacion4 {
-    color: #F4F3F8;
-    text-transform: uppercase;
-    vertical-align: middle;
-    text-align: center;
-    background-color: rgb(220, 1, 85);
-    height: 25px;
-    width: 100%;
-    float: left;
-    margin: 10px;
-    margin-top: 0;
-  }
-  .elementos_aside {
-    position: absolute;
-    background-color: rgb(220, 1, 85);
-    height: auto;
-    float: right;
-    margin-bottom: 0px;
-    margin-top: 100%;
-    width: 100%;
-    display: flex;
-  }
-  .divisores_aside {
-    display: none;
-  }
 }/*# sourceMappingURL=publicaciones.css.map */

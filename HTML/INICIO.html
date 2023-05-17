@@ -12,67 +12,70 @@
 
 <body>
     <main>
-        <header>
-            <input type="checkbox" class="checkbox" id="menu-toogle">
+        <header> 
+            <input type="checkbox" class="checkbox" id="menu-toogle"> <!--Casilla para que el menú se despliegue-->
             <label for="menu-toogle" class="menu-toogle"></label>
-
             <nav class="barra_de_navegacion">
                 <div id="elementos_del_menu">
-                    <span id="inicio"><a href="../HTML/INICIO.html">Inicio</a></span>
-                    <span id="publicaciones"><a href="../HTML/publicaciones.html">Publicaciones</a></span>
+                    <span id="inicio"><a href="../HTML/INICIO.html">Inicio</a></span> <!--Elementos de navegación-->
+                    <span id="publicaciones"><a href="../HTML/publicaciones.html">Publicaciones</a></span> 
                     <span id="nosotros"><a href="../HTML/sobre nosotros.html">Sobre nosotros</a></span>
                 </div>
             </nav>
-            <span id="titulo">SexSmart</span>
+            <span id="titulo">SexSmart</span><!--título-->
             <section class="aviso_principal">
                 <span id="aviso">¡Aclara tus dudas
                      <br>de salud sexual y <br>reproductiva!</span>
                 <div class="contenedor-imagen">
                     <img id="imagen_preservativos" src="../IMAGENES//Pagina de inicio/Preservativos - vector/vector sin fondo.png" 
-                    alt="Imagen de freepik- salud sexual y reproductiva-https://bit.ly/imagen_preservativos">
+                    alt="Imagen de freepik- salud sexual y reproductiva-https://bit.ly/imagen_preservativos"> <!--Vector imágen principal-->
                 </div>
                 
                 <div id="sombras1"></div>
                 <div id="sombras2"></div>
             </section>
-            <section>
+            <!-- <section>
                 <form action="" class="busqueda-form">
                     <label for="" class="busqueda">
                         <input type="text" placeholder="¿TIENES UNA DUDA?" class="busqueda__input">
                         <button class="busqueda__btn">Buscar</button>
                     </label>
                 </form> 
-            </section>
+            </section> -->
         </header>
 
         <article>
             <section class="temas">
                 <figure class="temas__contenedor">
                     <img src="../IMAGENES/Pagina de inicio/anticonceptivo.png" alt="Anticonceptivo">
-                    <figcaption>Métodos Anticonceptivo</figcaption>
+                    <figcaption>MÉTODOS ANTICONCEPTIVOS</figcaption>
                 </figure>
                 <figure class="temas__contenedor">
                     <img src="../IMAGENES/Pagina de inicio/enfermedad-de-transmision-sexual.png" alt="Enfermedades de Transmisión Sexual">
-                    <figcaption>Enfermedades de Transmisión Sexual</figcaption>
+                    <figcaption>ENFERMEDADES DE TRANSMISIÓN SEXUAL</figcaption>
                 </figure>
                 <figure class="temas__contenedor">
                     <img src="../IMAGENES/Pagina de inicio/embarazada.png" alt="Embarazada">
-                    <figcaption>Embarazo Seguro y Deseado</figcaption>
+                    <figcaption>EMBARAZO SEGURO Y DESEADO</figcaption>
                 </figure>
             </section>
         </article>
 
         <article>
             <section class="crear-cuenta">
-                <h1>¡Crea tu cuenta!</h1>
-                <form action="">
+                <h1>¡Envíanos una pregunta!</h1>
+                <form action="" method="post">
                     <label for="">
-                        <input type="text" placeholder="Nombre" class="cuenta__input">
+                        <input type="text" placeholder="Nombre" class="cuenta__input" >
                         <input type="text" placeholder="Telefono" class="cuenta__input">
-                        <input type="text" placeholder="Correo" class="cuenta__input">
+                        <input type="email" placeholder="Correo" class="cuenta__input" required>
                     </label>
+                    <br><br>
+                    <textarea name="pregunta" rows="4" cols="20" placeholder="Ingresa tu pregunta"></textarea>
+                    <br><br>
+                    <input type="submit" class="cuenta__btn" placeholder="ENVIAR" > 
                 </form>
-                <button class="cuenta__btn">Registrarse</button>
+                
             </section>
         </article>
     </main>

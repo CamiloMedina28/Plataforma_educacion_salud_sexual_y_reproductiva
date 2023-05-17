@@ -10,6 +10,28 @@ $color_titulo:  rgba(220,1,85,1);
     color:white;
 }
 
+@mixin items_navegacion($top, $width){
+    color: $color_de_fondo;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: center;
+    background-color: $color_titulo;
+    height:25px;
+	width:$width;
+	float:left;
+    margin: 10px;
+    margin-top: $top;
+    display: block;
+}
+
+@mixin elementos_menu_checked($top, $right){
+    position: absolute;
+    font-size: xx-large;
+    justify-self: center;
+    margin-top: $top;
+    right: $right;
+}
+
 //imports
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
@@ -63,6 +85,32 @@ main header .barra_de_navegacion #elementos_del_menu #nosotros:hover::before{
     display: none;
 }
 
+.navegacion{
+    position: absolute;
+    margin-top: 200px;
+    width: 100%;
+    flex-direction: column;
+}
+#items_navegacion1{
+    @include items_navegacion(0,100%);
+}
+#items_navegacion2{
+    @include items_navegacion(0,100%);
+}
+#items_navegacion3{
+    @include items_navegacion(0,100%);
+}
+#items_navegacion4{
+    @include items_navegacion(0,100%);
+}
+.elementos_aside{
+    display: none;
+}
+.divisores_aside{
+    display: none;
+}
+
+
 .menu-toogle {
     display: block;
     position:absolute; /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
@@ -81,21 +129,29 @@ main header .barra_de_navegacion #elementos_del_menu #nosotros:hover::before{
     color:$color_de_fondo;
     
 }
-.checkbox {
-    display:none; /*Ocultamos el checkbox pues no nos interesa que se vea*/
-}
+// .checkbox {
+//     display:none; /*Ocultamos el checkbox pues no nos interesa que se vea*/
+// }
 .checkbox:checked ~ .barra_de_navegacion #elementos_del_menu{
     top: 45px;
     right:0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
-    display: flex;
+    display: block;
 }
 
-@mixin elementos_menu_checked($top, $right){
-    position: absolute;
-    font-size: xx-large;
-    justify-self: center;
-    margin-top: $top;
-    right: $right;
+.checkbox:checked ~ .elementos_de_la_navegacion .navegacion{
+    display: none;
+}
+.checkbox:checked ~ .elementos_de_la_navegacion .navegacion .items_navegacion1{
+    display: none;
+}
+.checkbox:checked ~ .elementos_de_la_navegacion .items_navegacion2{
+    display: none;
+}
+.checkbox:checked ~ .elementos_de_la_navegacion .items_navegacion3{
+    display: none;
+}
+.checkbox:checked ~ .elementos_de_la_navegacion .items_navegacion4{
+    display: none;
 }
 
 .barra_de_navegacion #elementos_del_menu a{
@@ -111,13 +167,7 @@ main header .barra_de_navegacion #elementos_del_menu #nosotros:hover::before{
     @include elementos_menu_checked(160px, 85px);
 }
 
-.checkbox:checked ~ .aviso_principal .contenedor-imagen #imagen_preservativos{
-    visibility: hidden;
-}
-.checkbox:checked ~ .aviso_principal #aviso{
-    visibility: hidden;
-}
-.checkbox:checked ~ .aviso_principal #sombras1{
-    visibility: hidden;
-}
+
+
+
 

@@ -280,6 +280,10 @@ nav a:visited {
   width: 90%;
 }
 
+.temas .temas__contenedor figcaption {
+  font-family: Bebas Neue;
+}
+
 .dudas {
   top: 37rem;
   position: absolute;

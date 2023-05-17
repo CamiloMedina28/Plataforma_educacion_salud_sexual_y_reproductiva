@@ -66,6 +66,77 @@ main header .barra_de_navegacion #elementos_del_menu #nosotros:hover::before {
   display: none;
 }
 
+.navegacion {
+  position: absolute;
+  margin-top: 200px;
+  width: 100%;
+  flex-direction: column;
+}
+
+#items_navegacion1 {
+  color: #F4F3F8;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  background-color: rgb(220, 1, 85);
+  height: 25px;
+  width: 100%;
+  float: left;
+  margin: 10px;
+  margin-top: 0;
+  display: block;
+}
+
+#items_navegacion2 {
+  color: #F4F3F8;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  background-color: rgb(220, 1, 85);
+  height: 25px;
+  width: 100%;
+  float: left;
+  margin: 10px;
+  margin-top: 0;
+  display: block;
+}
+
+#items_navegacion3 {
+  color: #F4F3F8;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  background-color: rgb(220, 1, 85);
+  height: 25px;
+  width: 100%;
+  float: left;
+  margin: 10px;
+  margin-top: 0;
+  display: block;
+}
+
+#items_navegacion4 {
+  color: #F4F3F8;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  background-color: rgb(220, 1, 85);
+  height: 25px;
+  width: 100%;
+  float: left;
+  margin: 10px;
+  margin-top: 0;
+  display: block;
+}
+
+.elementos_aside {
+  display: none;
+}
+
+.divisores_aside {
+  display: none;
+}
+
 .menu-toogle {
   display: block;
   position: absolute; /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
@@ -84,14 +155,30 @@ main header .barra_de_navegacion #elementos_del_menu #nosotros:hover::before {
   color: #F4F3F8;
 }
 
-.checkbox {
-  display: none; /*Ocultamos el checkbox pues no nos interesa que se vea*/
-}
-
 .checkbox:checked ~ .barra_de_navegacion #elementos_del_menu {
   top: 45px;
   right: 0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
-  display: flex;
+  display: block;
+}
+
+.checkbox:checked ~ .elementos_de_la_navegacion .navegacion {
+  display: none;
+}
+
+.checkbox:checked ~ .elementos_de_la_navegacion .navegacion .items_navegacion1 {
+  display: none;
+}
+
+.checkbox:checked ~ .elementos_de_la_navegacion .items_navegacion2 {
+  display: none;
+}
+
+.checkbox:checked ~ .elementos_de_la_navegacion .items_navegacion3 {
+  display: none;
+}
+
+.checkbox:checked ~ .elementos_de_la_navegacion .items_navegacion4 {
+  display: none;
 }
 
 .barra_de_navegacion #elementos_del_menu a {
@@ -120,16 +207,4 @@ main header .barra_de_navegacion #elementos_del_menu #nosotros:hover::before {
   justify-self: center;
   margin-top: 160px;
   right: 85px;
-}
-
-.checkbox:checked ~ .aviso_principal .contenedor-imagen #imagen_preservativos {
-  visibility: hidden;
-}
-
-.checkbox:checked ~ .aviso_principal #aviso {
-  visibility: hidden;
-}
-
-.checkbox:checked ~ .aviso_principal #sombras1 {
-  visibility: hidden;
 }/*# sourceMappingURL=media.css.map */
