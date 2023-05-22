@@ -10,6 +10,14 @@ $color_titulo:  rgba(220,1,85,1);
     color:white;
 }
 
+@mixin elementos_menu_checked($top, $right){
+    position: absolute;
+    font-size: xx-large;
+    justify-self: center;
+    margin-top: $top;
+    right: $right;
+}
+
 //imports
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
@@ -88,14 +96,6 @@ main header .barra_de_navegacion #elementos_del_menu #nosotros:hover::before{
     top: 45px;
     right:0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
     display: flex;
-}
-
-@mixin elementos_menu_checked($top, $right){
-    position: absolute;
-    font-size: xx-large;
-    justify-self: center;
-    margin-top: $top;
-    right: $right;
 }
 
 .barra_de_navegacion #elementos_del_menu a{

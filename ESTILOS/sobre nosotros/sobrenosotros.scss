@@ -27,15 +27,22 @@ $color_titulo:  rgba(220,1,85,1);
     width: $width;
     transition-duration: 0.5s;
 }
+
+@mixin imagenes(){
+    max-width: 228px;
+    max-height: 205px;
+    width: 100%
+}
 //fuentes
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 //Características del body para la página de inicio.
 body{
-    position: relative;
-    max-width: 1780px;
-    max-height: 1752px;
+    width: 100%;
+    position: absolute;
     background-color: $color_de_fondo;
+    font-size: 16px;
 }
 
 nav a:link {
@@ -49,53 +56,150 @@ nav a:visited {
 }
 
 .barra_de_navegacion{
-    position: relative;
+    position:absolute;
     float: right;
     width: 100%;
     height: 158px;
     top: 10px;
-    margin-right: 15px;
+    margin-right: 5px;
 }
 
-#elementos_del_menu #inicio{
-    @include caracteristicas_elementos_navegacion(48px,315px);
+.barra_de_navegacion #elementos_del_menu #inicio{
+    @include caracteristicas_elementos_navegacion(40px,315px);
 }
-#elementos_del_menu #inicio::before{
+.barra_de_navegacion #elementos_del_menu #inicio::before{
     @include seudoclase_menu(36px, $color_de_fondo);
 }
-#elementos_del_menu #inicio:hover::before{
+.barra_de_navegacion #elementos_del_menu #inicio:hover::before{
     @include seudoclase_menu(36px, $color_titulo);
 }
 
-#elementos_del_menu #publicaciones{
-    @include caracteristicas_elementos_navegacion(126px,165px);
+.barra_de_navegacion #elementos_del_menu #publicaciones{
+    @include caracteristicas_elementos_navegacion(115px,165px);
 }
-#elementos_del_menu #publicaciones::before{
+.barra_de_navegacion #elementos_del_menu #publicaciones::before{
     @include seudoclase_menu (103px, $color_de_fondo);
 }
-#elementos_del_menu #publicaciones:hover::before{
+.barra_de_navegacion #elementos_del_menu #publicaciones:hover::before{
     @include seudoclase_menu (103px, $color_titulo);
 }
 
-#elementos_del_menu #nosotros{
-    @include caracteristicas_elementos_navegacion(136px, 5px);
+.barra_de_navegacion #elementos_del_menu #nosotros{
+    @include caracteristicas_elementos_navegacion(130px, 5px);
 }
-#elementos_del_menu #nosotros::before{
+.barra_de_navegacion #elementos_del_menu #nosotros::before{
     @include seudoclase_menu (108px, $color_de_fondo);
 }
-#elementos_del_menu #nosotros:hover ::before{
+.barra_de_navegacion #elementos_del_menu #nosotros:hover ::before{
     @include seudoclase_menu (108px, $color_titulo);
 }
-
+.menu-toogle {
+    display: none;
+    position:absolute; /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
+    width: 35px;
+    line-height:1.1;
+    text-align:center;
+    top:6.5px; /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
+    right: 8px; 
+    border-radius:3px;
+    background-color: $color_titulo;
+}
+/*Añadimos la haburguesa y le damos unos estilos*/
+.menu-toogle::before {
+    content:"☰";
+    font-size:32px;
+    color:white;
+}
+.checkbox {
+    display:none; /*Ocultamos el checkbox pues no nos interesa que se vea*/
+}
+.checkbox:checked ~ .nav {
+    right:0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
+    display: flex;
+}
 #titulo{
-    width: 671px;
+    max-width: 671px;
     color: $color_titulo;
     position: absolute;
     top: 0px;
     left: 30px;
     font-family: Poppins;
-    font-weight: SemiBold;
-    font-size: 25px;
+    font-size: 2vmax;
     opacity: 1;
     text-align: left;
+}
+
+#titulo_principal{
+    max-width: 671px;
+    color: $color_titulo;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-family: Bebas Neue;
+    font-size: 5vmax;
+    opacity: 1;
+    text-align: left;
+}
+
+
+.quienes_somos {
+    position: absolute;
+    margin-top: 165px;
+    width: 75%;
+    left: 50%;
+    transform: translate(-50%);
+    height: auto;
+    background-color: $color_titulo;
+    color: $color_de_fondo;
+    font-family: Bebas Neue;
+    font-size: 2vmax;
+}
+  
+.quienes_somos .imagen {
+    float: left;
+    margin: 15px;
+}
+
+.quienes_somos .texto{
+    padding: 15px;
+}
+  
+.imagenes_nuestras{
+    width: 85%;
+    margin: 35% 50%;
+    transform: translate(-50%);
+
+
+}
+
+.contenedor_grid_imagenes{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 5vmax;
+    row-gap: 5vmax;
+}
+
+.contenedor_grid_imagenes #img1{
+    @include imagenes();
+}
+.contenedor_grid_imagenes #img2{
+    @include imagenes();
+}
+.contenedor_grid_imagenes #img3{
+    @include imagenes();
+}
+.contenedor_grid_imagenes #img4{
+    @include imagenes();
+}
+.contenedor_grid_imagenes #img5{
+    @include imagenes();
+}
+.contenedor_grid_imagenes #img6{
+    @include imagenes();
+}
+.contenedor_grid_imagenes #img7{
+    @include imagenes();
+}
+.contenedor_grid_imagenes #img8{
+    @include imagenes();
 }

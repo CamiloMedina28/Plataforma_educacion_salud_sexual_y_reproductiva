@@ -122,14 +122,65 @@ main header .barra_de_navegacion #elementos_del_menu #nosotros:hover::before {
   right: 85px;
 }
 
-.checkbox:checked ~ .aviso_principal .contenedor-imagen #imagen_preservativos {
-  visibility: hidden;
+@media screen and (max-width: 600px) {
+  .quienes_somos {
+    display: block;
+    width: 255px;
+  }
+  .quienes .imagen {
+    display: block;
+  }
+  .quienes_somos .texto {
+    padding: 0;
+    padding-left: 15px;
+    padding-top: 255px;
+    display: block;
+  }
+}
+.contenedor_grid_imagenes {
+  display: grid;
+  grid-template-columns: auto auto;
+  -moz-column-gap: 5vmax;
+       column-gap: 5vmax;
+  row-gap: 5vmax;
 }
 
-.checkbox:checked ~ .aviso_principal #aviso {
-  visibility: hidden;
+.contenedor_grid_imagenes #img1 {
+  width: 28px;
+  height: 25px;
 }
 
-.checkbox:checked ~ .aviso_principal #sombras1 {
-  visibility: hidden;
+.contenedor_grid_imagenes #img2 {
+  width: 28px;
+  height: 25px;
+}
+
+.contenedor_grid_imagenes #img3 {
+  width: 28px;
+  height: 25px;
+}
+
+.contenedor_grid_imagenes #img4 {
+  width: 28px;
+  height: 25px;
+}
+
+.contenedor_grid_imagenes #img5 {
+  width: 28px;
+  height: 25px;
+}
+
+.contenedor_grid_imagenes #img6 {
+  width: 28px;
+  height: 25px;
+}
+
+.contenedor_grid_imagenes #img7 {
+  width: 28px;
+  height: 25px;
+}
+
+.contenedor_grid_imagenes #img8 {
+  width: 28px;
+  height: 25px;
 }/*# sourceMappingURL=media.css.map */

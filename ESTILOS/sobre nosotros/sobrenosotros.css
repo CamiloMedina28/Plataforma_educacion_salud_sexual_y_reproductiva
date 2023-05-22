@@ -1,9 +1,11 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 body {
-  position: relative;
-  max-width: 1780px;
-  max-height: 1752px;
+  width: 100%;
+  position: absolute;
   background-color: #F4F3F8;
+  font-size: 16px;
 }
 
 nav a:link {
@@ -17,16 +19,16 @@ nav a:visited {
 }
 
 .barra_de_navegacion {
-  position: relative;
+  position: absolute;
   float: right;
   width: 100%;
   height: 158px;
   top: 10px;
-  margin-right: 15px;
+  margin-right: 5px;
 }
 
-#elementos_del_menu #inicio {
-  width: 48px;
+.barra_de_navegacion #elementos_del_menu #inicio {
+  width: 40px;
   color: #333333;
   position: absolute;
   top: 0px;
@@ -38,7 +40,7 @@ nav a:visited {
   text-align: left;
 }
 
-#elementos_del_menu #inicio::before {
+.barra_de_navegacion #elementos_del_menu #inicio::before {
   position: absolute;
   content: "";
   border: solid;
@@ -48,7 +50,7 @@ nav a:visited {
   transition-duration: 0.5s;
 }
 
-#elementos_del_menu #inicio:hover::before {
+.barra_de_navegacion #elementos_del_menu #inicio:hover::before {
   position: absolute;
   content: "";
   border: solid;
@@ -58,8 +60,8 @@ nav a:visited {
   transition-duration: 0.5s;
 }
 
-#elementos_del_menu #publicaciones {
-  width: 126px;
+.barra_de_navegacion #elementos_del_menu #publicaciones {
+  width: 115px;
   color: #333333;
   position: absolute;
   top: 0px;
@@ -71,7 +73,7 @@ nav a:visited {
   text-align: left;
 }
 
-#elementos_del_menu #publicaciones::before {
+.barra_de_navegacion #elementos_del_menu #publicaciones::before {
   position: absolute;
   content: "";
   border: solid;
@@ -81,7 +83,7 @@ nav a:visited {
   transition-duration: 0.5s;
 }
 
-#elementos_del_menu #publicaciones:hover::before {
+.barra_de_navegacion #elementos_del_menu #publicaciones:hover::before {
   position: absolute;
   content: "";
   border: solid;
@@ -91,8 +93,8 @@ nav a:visited {
   transition-duration: 0.5s;
 }
 
-#elementos_del_menu #nosotros {
-  width: 136px;
+.barra_de_navegacion #elementos_del_menu #nosotros {
+  width: 130px;
   color: #333333;
   position: absolute;
   top: 0px;
@@ -104,7 +106,7 @@ nav a:visited {
   text-align: left;
 }
 
-#elementos_del_menu #nosotros::before {
+.barra_de_navegacion #elementos_del_menu #nosotros::before {
   position: absolute;
   content: "";
   border: solid;
@@ -114,7 +116,7 @@ nav a:visited {
   transition-duration: 0.5s;
 }
 
-#elementos_del_menu #nosotros:hover ::before {
+.barra_de_navegacion #elementos_del_menu #nosotros:hover ::before {
   position: absolute;
   content: "";
   border: solid;
@@ -124,15 +126,138 @@ nav a:visited {
   transition-duration: 0.5s;
 }
 
+.menu-toogle {
+  display: none;
+  position: absolute; /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
+  width: 35px;
+  line-height: 1.1;
+  text-align: center;
+  top: 6.5px; /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
+  right: 8px;
+  border-radius: 3px;
+  background-color: rgb(220, 1, 85);
+}
+
+/*Añadimos la haburguesa y le damos unos estilos*/
+.menu-toogle::before {
+  content: "☰";
+  font-size: 32px;
+  color: white;
+}
+
+.checkbox {
+  display: none; /*Ocultamos el checkbox pues no nos interesa que se vea*/
+}
+
+.checkbox:checked ~ .nav {
+  right: 0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
+  display: flex;
+}
+
 #titulo {
-  width: 671px;
+  max-width: 671px;
   color: rgb(220, 1, 85);
   position: absolute;
   top: 0px;
   left: 30px;
   font-family: Poppins;
-  font-weight: SemiBold;
-  font-size: 25px;
+  font-size: 2vmax;
   opacity: 1;
   text-align: left;
+}
+
+#titulo_principal {
+  max-width: 671px;
+  color: rgb(220, 1, 85);
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-family: Bebas Neue;
+  font-size: 5vmax;
+  opacity: 1;
+  text-align: left;
+}
+
+.quienes_somos {
+  position: absolute;
+  margin-top: 165px;
+  width: 75%;
+  left: 50%;
+  transform: translate(-50%);
+  height: auto;
+  background-color: rgb(220, 1, 85);
+  color: #F4F3F8;
+  font-family: Bebas Neue;
+  font-size: 2vmax;
+}
+
+.quienes_somos .imagen {
+  float: left;
+  margin: 15px;
+}
+
+.quienes_somos .texto {
+  padding: 15px;
+}
+
+.imagenes_nuestras {
+  width: 85%;
+  margin: 35% 50%;
+  transform: translate(-50%);
+}
+
+.contenedor_grid_imagenes {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  -moz-column-gap: 5vmax;
+       column-gap: 5vmax;
+  row-gap: 5vmax;
+}
+
+.contenedor_grid_imagenes #img1 {
+  max-width: 228px;
+  max-height: 205px;
+  width: 100%;
+}
+
+.contenedor_grid_imagenes #img2 {
+  max-width: 228px;
+  max-height: 205px;
+  width: 100%;
+}
+
+.contenedor_grid_imagenes #img3 {
+  max-width: 228px;
+  max-height: 205px;
+  width: 100%;
+}
+
+.contenedor_grid_imagenes #img4 {
+  max-width: 228px;
+  max-height: 205px;
+  width: 100%;
+}
+
+.contenedor_grid_imagenes #img5 {
+  max-width: 228px;
+  max-height: 205px;
+  width: 100%;
+}
+
+.contenedor_grid_imagenes #img6 {
+  max-width: 228px;
+  max-height: 205px;
+  width: 100%;
+}
+
+.contenedor_grid_imagenes #img7 {
+  max-width: 228px;
+  max-height: 205px;
+  width: 100%;
+}
+
+.contenedor_grid_imagenes #img8 {
+  max-width: 228px;
+  max-height: 205px;
+  width: 100%;
 }/*# sourceMappingURL=sobrenosotros.css.map */

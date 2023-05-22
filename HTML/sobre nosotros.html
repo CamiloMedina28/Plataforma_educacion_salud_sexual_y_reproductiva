@@ -2,22 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
+    <title>Sobre Nosotros</title>
     <link rel="shortcut icon" href="../IMAGENES/Logos/logo (1).png">
     <link href="../ESTILOS/sobre nosotros/sobrenosotros.css" rel="stylesheet" type="text/css">
     <link href="../ESTILOS/sobre nosotros/mediaquery/media.css" rel="stylesheet" type="text/css" media="screen and (max-width: 768px)">
 </head>
+
 <body>
-    <header>
-        <nav class="barra_de_navegacion">
-            <div id="elementos_del_menu">
-                <span id="inicio"><a href="../HTML/INICIO.html">Inicio</a></span>
-                <span id="publicaciones"><a href="../HTML/publicaciones.html">Publicaciones</a></span>
-                <span id="nosotros"><a href="../HTML/sobre nosotros.html">Sobre nosotros</a></span>
-            </div>
-            <span id="titulo">SexSmart</span>
-        </nav>
-    </header>
+    <main>
+        <header> 
+            <input type="checkbox" class="checkbox" id="menu-toogle"> <!--Casilla para que el menú se despliegue-->
+            <label for="menu-toogle" class="menu-toogle"></label>
+            <nav class="barra_de_navegacion">
+                <div id="elementos_del_menu">
+                    <span id="inicio"><a href="../HTML/INICIO.html">Inicio</a></span> <!--Elementos de navegación-->
+                    <span id="publicaciones"><a href="../HTML/publicaciones.html">Publicaciones</a></span> 
+                    <span id="nosotros"><a href="../HTML/sobre nosotros.html">Sobre nosotros</a></span>
+                </div>
+            </nav>
+            <span id="titulo">SexSmart</span><!--título-->
+        </header>
+
+        <h1 id="titulo_principal">Sobre Nosotros</h1>
+
+        <article>
+            <section>
+                <div class="quienes_somos">
+                    <img class="imagen" src="../IMAGENES/logo universidad/logo_unal.png">
+                    <div class="texto">
+                        <span>Somos estudiantes de la Universidad Nacional de Colombia</span>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <br><br><br><br><br>
+        <article class="imagenes_nuestras">
+            <section>
+                <div class="contenedor_grid_imagenes">
+                    <span id="img1"><img src="../IMAGENES/nosotros/camilo.png"></span>
+                    <span id="img2"><img src="../IMAGENES/nosotros/daniel.png"></span>
+                    <span id="img3"><img src="../IMAGENES/nosotros/juan david.png"></span>
+                    <span id="img4"><img src="../IMAGENES/nosotros/juan pablo.png"></span>
+                    <span id="img5"><img src="../IMAGENES/nosotros/luis.png"></span>
+                    <span id="img6"><img src="../IMAGENES/nosotros/oscar.png"></span>
+                    <span id="img7"><img src="../IMAGENES/nosotros/santiago.png"></span>
+                    <span id="img8"><img src="../IMAGENES/nosotros/nadie.png"></span>
+                </div>
+            </section>
+        </article>
+        
+    </main>
 </body>
-</html>
