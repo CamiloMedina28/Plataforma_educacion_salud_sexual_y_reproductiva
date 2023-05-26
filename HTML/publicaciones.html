@@ -4,47 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
     <link rel="shortcut icon" href="../IMAGENES/Logos/logo (1).png">
-    <link href="../ESTILOS/publicaciones/publicaciones.css" rel="stylesheet" type="text/css">
-    <link href="../ESTILOS/publicaciones/media_query/media.css" rel="stylesheet" type="text/css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="../ESTILOS/publicaciones/publicaciones.css">
+    <link rel="stylesheet" href="../ESTILOS/publicaciones/media_query/media.css" media="screen and (max-width: 768px)">
+    <title>Publicaciones</title>
 </head>
-
 <body>
-    <main>
-        <header> 
-            <input type="checkbox" class="checkbox" id="menu-toogle"> <!--Casilla para que el menú se despliegue-->
-            <label for="menu-toogle" class="menu-toogle"></label>
-            <nav class="barra_de_navegacion">
-                <div id="elementos_del_menu">
-                    <span id="inicio"><a href="../HTML/INICIO.html">Inicio</a></span> <!--Elementos de navegación-->
-                    <span id="publicaciones"><a href="../HTML/publicaciones.html">Publicaciones</a></span> 
-                    <span id="nosotros"><a href="../HTML/sobre nosotros.html">Sobre nosotros</a></span>
-                </div>
-            </nav>
-            <span id="titulo">SexSmart</span><!--título-->
-        </header>
+    <header>
+        <span class="titulo">SexSmart</span>
+        <input type="checkbox" class="checkbox" id="menu-toogle">
+        <label for="menu-toogle" class="menu-toogle"></label>
+        <nav class="nav">
+            <a class="inicio" href="../HTML/INICIO.html">Inicio</a>
+            <a class="publicaciones" href="../HTML/publicaciones.html">Publicaciones</a>
+            <a class="sobre_nosotros" href="../HTML/sobre nosotros.html">Sobre nosotros</a>
+        </nav>
+    </header>
 
-        <article class="elementos_de_la_navegacion">
-            <section class="navegacion">
-                <div id="items_navegacion1">
-                    <span><a href="../PUBLICACIONES/elementos_navegacion/campus.html">Campus</a></span>
-                </div>
-        
-                <div id="items_navegacion2">
-                    <span><a href="../PUBLICACIONES/elementos_navegacion/nacionales.html">Nacionales</a></span>
-                </div>
-        
-                <div id="items_navegacion3">
-                    <span><a href="../PUBLICACIONES/elementos_navegacion/internacionales.html">Internacionales</a></span>
-                </div>
-        
-                <div id="items_navegacion4">
-                    <span><a href="../PUBLICACIONES/elementos_navegacion/historia.html">Historia</a></span>
-                </div>
+    <main>
+        <h1 id="titulo_principal">Publicaciones</h1>
+        <article>
+            <section class="elementos_navergacion">
+                <a href="../PUBLICACIONES/elementos_navegacion/campus.html">CAMPUS</a>
+                <a href="../PUBLICACIONES/elementos_navegacion/historia.html">HISTORIA</a>
+                <a href="../PUBLICACIONES/elementos_navegacion/internacionales.html">INTERNACIONALES</a>
+                <a href="../PUBLICACIONES/elementos_navegacion/nacionales.html">NACIONALES</a>
             </section>
         </article>
     </main>
+    
 </body>
 </html>
-

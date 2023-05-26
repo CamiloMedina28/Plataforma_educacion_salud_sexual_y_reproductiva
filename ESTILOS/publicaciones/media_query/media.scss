@@ -2,115 +2,88 @@
 $color_de_fondo: #F4F3F8;
 $color_letras: #333333;
 $color_titulo:  rgba(220,1,85,1);
-//mixins
-@mixin  elementos_menu(){
-    /*Estilos de los li del menú*/
-    text-decoration: none;
-    font-family: Poppins;
-    color:white;
-}
+//fuentes
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-@mixin elementos_menu_checked($top, $right){
-    position: absolute;
+@mixin elementos_del_menu($width, $top){
+    right: 250px;
+    color:$color_de_fondo;
     font-size: xx-large;
-    justify-self: center;
-    margin-top: $top;
-    right: $right;
-}
-
-//imports
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-//parámetros generales
-.barra_de_navegacion #elementos_del_menu{
+    width: $width;
     position: absolute;
-    display:none;
-    align-items: center;
-    width:300px;
-    height:350px;
-    background-color: $color_titulo;
-}
-
-#titulo{
-    max-width: 671px;
-    color: $color_titulo;
-    position: absolute;
-    top: 0px;
-    left: 30px;
+    top: $top;
     font-family: Poppins;
-    font-size: 2vmax;
+    font-weight: 400;
     opacity: 1;
     text-align: left;
 }
-
-main header .barra_de_navegacion #elementos_del_menu #inicio{
-    @include elementos_menu();
-}
-main header .barra_de_navegacion #elementos_del_menu #publicaciones{
-    @include elementos_menu();
-}
-main header .barra_de_navegacion #elementos_del_menu #nosotros{
-    @include elementos_menu();
-}
-main header .barra_de_navegacion #elementos_del_menu #inicio::before{
-    display: none;
-}
-main header .barra_de_navegacion #elementos_del_menu #publicaciones::before{
-    display: none;
-}
-main header .barra_de_navegacion #elementos_del_menu #nosotros::before{
-    display: none;
-}
-main header .barra_de_navegacion #elementos_del_menu #inicio:hover::before{
-    display: none;
-}
-main header .barra_de_navegacion #elementos_del_menu #publicaciones:hover::before{
-    display: none;
-}
-main header .barra_de_navegacion #elementos_del_menu #nosotros:hover::before{
-    display: none;
+@mixin seudoclase_menu ($width, $color){
+    position: absolute;
+    content: '';
+    border: solid;
+    border-color: $color;
+    bottom: -3px;
+    width: $width;
+    transition-duration: 0.5s;
 }
 
-.menu-toogle {
-    display: block;
-    position:absolute; /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
-    width: 35px;
-    line-height:1.1;
-    text-align:center;
-    top: 0px; /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
-    right: 30px; 
-    border-radius:3px;
+.nav {
+    margin-top: 3rem;
+    position:absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width:45vh;
+    height:55vh;
     background-color: $color_titulo;
 }
+/*Estilos de los li del menú*/
 
 .menu-toogle::before {
     content:"☰";
     font-size:32px;
     color:$color_de_fondo;
-    
 }
 .checkbox {
     display:none; /*Ocultamos el checkbox pues no nos interesa que se vea*/
 }
-.checkbox:checked ~ .barra_de_navegacion #elementos_del_menu{
-    top: 45px;
+.checkbox:checked ~ .nav {
     right:0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
     display: flex;
 }
-
-.barra_de_navegacion #elementos_del_menu a{
-    color: $color_de_fondo;
-}
-.checkbox:checked ~ .barra_de_navegacion #elementos_del_menu #inicio{
-    @include elementos_menu_checked(30px, 155px);
-}
-.checkbox:checked ~ .barra_de_navegacion #elementos_del_menu #publicaciones{
-    @include elementos_menu_checked(90px, 145px);
-}
-.checkbox:checked ~ .barra_de_navegacion #elementos_del_menu #nosotros{
-    @include elementos_menu_checked(160px, 85px);
+.checkbox:checked ~ .titulo{
+    visibility: hidden;
 }
 
-.checkbox:checked ~ .navegacion{
-    display: none;
+
+header .nav .inicio{
+    @include elementos_del_menu(40px, 50px);
+}
+.nav .inicio::before{
+    @include seudoclase_menu(36px, $color_titulo);
+}
+.nav .inicio:hover::before{
+    @include seudoclase_menu(36px, $color_titulo);
+}
+
+header .nav .publicaciones{
+    @include elementos_del_menu(30px, 150px);
+}
+.nav .publicaciones::before{
+    @include seudoclase_menu (103px, $color_titulo);
+}
+.nav .publicaciones:hover::before{
+    @include seudoclase_menu (103px, $color_titulo);
+}
+
+header .nav .sobre_nosotros{
+    @include elementos_del_menu(45px, 250px);
+}
+.nav .sobre_nosotros::before{
+    @include seudoclase_menu (108px, $color_titulo);
+}
+.nav .sobre_nosotros:hover::before{
+    @include seudoclase_menu (108px, $color_titulo);
 }

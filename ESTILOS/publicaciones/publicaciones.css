@@ -8,126 +8,35 @@ body {
   font-size: 16px;
 }
 
-nav a:link {
-  text-decoration: none;
-  color: #333333;
+.titulo {
+  max-width: 671px;
+  color: rgb(220, 1, 85);
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  font-family: Poppins;
+  font-size: 2vmax;
+  opacity: 1;
+  text-align: left;
 }
 
-nav a:visited {
-  text-decoration: none;
-  color: #333333;
+header {
+  display: flex;
+  justify-content: space-between;
 }
 
-.barra_de_navegacion {
-  position: relative;
-  float: right;
-  width: 100%;
+.nav {
   height: 158px;
   top: 10px;
   margin-right: 5px;
-}
-
-.barra_de_navegacion #elementos_del_menu #inicio {
-  width: 40px;
-  color: #333333;
-  position: absolute;
-  top: 0px;
-  font-family: Poppins;
-  font-weight: 400;
-  font-size: 15px;
-  opacity: 1;
-  right: 315px;
-  text-align: left;
-}
-
-.barra_de_navegacion #elementos_del_menu #inicio::before {
-  position: absolute;
-  content: "";
-  border: solid;
-  border-color: #F4F3F8;
-  bottom: -3px;
-  width: 36px;
-  transition-duration: 0.5s;
-}
-
-.barra_de_navegacion #elementos_del_menu #inicio:hover::before {
-  position: absolute;
-  content: "";
-  border: solid;
-  border-color: rgb(220, 1, 85);
-  bottom: -3px;
-  width: 36px;
-  transition-duration: 0.5s;
-}
-
-.barra_de_navegacion #elementos_del_menu #publicaciones {
-  width: 115px;
-  color: #333333;
-  position: absolute;
-  top: 0px;
-  font-family: Poppins;
-  font-weight: 400;
-  font-size: 15px;
-  opacity: 1;
-  right: 165px;
-  text-align: left;
-}
-
-.barra_de_navegacion #elementos_del_menu #publicaciones::before {
-  position: absolute;
-  content: "";
-  border: solid;
-  border-color: #F4F3F8;
-  bottom: -3px;
-  width: 103px;
-  transition-duration: 0.5s;
-}
-
-.barra_de_navegacion #elementos_del_menu #publicaciones:hover::before {
-  position: absolute;
-  content: "";
-  border: solid;
-  border-color: rgb(220, 1, 85);
-  bottom: -3px;
-  width: 103px;
-  transition-duration: 0.5s;
-}
-
-.barra_de_navegacion #elementos_del_menu #nosotros {
-  width: 130px;
-  color: #333333;
-  position: absolute;
-  top: 0px;
-  font-family: Poppins;
-  font-weight: 400;
-  font-size: 15px;
-  opacity: 1;
-  right: 5px;
-  text-align: left;
-}
-
-.barra_de_navegacion #elementos_del_menu #nosotros::before {
-  position: absolute;
-  content: "";
-  border: solid;
-  border-color: #F4F3F8;
-  bottom: -3px;
-  width: 108px;
-  transition-duration: 0.5s;
-}
-
-.barra_de_navegacion #elementos_del_menu #nosotros:hover ::before {
-  position: absolute;
-  content: "";
-  border: solid;
-  border-color: rgb(220, 1, 85);
-  bottom: -3px;
-  width: 108px;
-  transition-duration: 0.5s;
+  position: relative;
+  display: flex;
+  height: inherit;
+  flex-direction: row;
+  background-color: #F4F3F8;
 }
 
 .menu-toogle {
-  display: none;
   position: absolute; /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
   width: 35px;
   line-height: 1.1;
@@ -140,104 +49,130 @@ nav a:visited {
 
 /*Añadimos la haburguesa y le damos unos estilos*/
 .menu-toogle::before {
-  content: "☰";
-  font-size: 32px;
-  color: white;
+  content: "";
 }
 
 .checkbox {
-  display: none; /*Ocultamos el checkbox pues no nos interesa que se vea*/
+  display: block;
 }
 
-.checkbox:checked ~ .nav {
-  right: 0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
-  display: flex;
+nav a:link {
+  text-decoration: none;
+  color: #333333;
 }
 
-#titulo {
-  max-width: 671px;
-  color: rgb(220, 1, 85);
+nav a:visited {
+  text-decoration: none;
+  color: #333333;
+}
+
+.nav .inicio {
+  width: 40px;
+  color: #333333;
   position: absolute;
   top: 0px;
-  left: 30px;
   font-family: Poppins;
-  font-size: 2vmax;
+  font-weight: 400;
+  font-size: 1rem;
   opacity: 1;
+  right: 315px;
   text-align: left;
 }
 
-.navegacion {
+.nav .inicio::before {
   position: absolute;
-  margin-top: 200px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  content: "";
+  border: solid;
+  border-color: #F4F3F8;
+  bottom: -3px;
+  width: 36px;
+  transition-duration: 0.5s;
 }
 
-#items_navegacion1 {
-  color: #F4F3F8;
-  text-transform: uppercase;
-  vertical-align: middle;
-  text-align: center;
-  background-color: rgb(220, 1, 85);
-  height: 25px;
-  width: 25%;
-  float: left;
-  margin: 10px;
-  margin-top: 0;
-  display: block;
+.nav .inicio:hover::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: rgb(220, 1, 85);
+  bottom: -3px;
+  width: 36px;
+  transition-duration: 0.5s;
 }
 
-#items_navegacion2 {
-  color: #F4F3F8;
-  text-transform: uppercase;
-  vertical-align: middle;
-  text-align: center;
-  background-color: rgb(220, 1, 85);
-  height: 25px;
-  width: 25%;
-  float: left;
-  margin: 10px;
-  margin-top: 0;
-  display: block;
+.nav .publicaciones {
+  width: 115px;
+  color: #333333;
+  position: absolute;
+  top: 0px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: 1;
+  right: 165px;
+  text-align: left;
 }
 
-#items_navegacion3 {
-  color: #F4F3F8;
-  text-transform: uppercase;
-  vertical-align: middle;
-  text-align: center;
-  background-color: rgb(220, 1, 85);
-  height: 25px;
-  width: 25%;
-  float: left;
-  margin: 10px;
-  margin-top: 0;
-  display: block;
+.nav .publicaciones::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: #F4F3F8;
+  bottom: -3px;
+  width: 103px;
+  transition-duration: 0.5s;
 }
 
-#items_navegacion4 {
-  color: #F4F3F8;
-  text-transform: uppercase;
-  vertical-align: middle;
-  text-align: center;
-  background-color: rgb(220, 1, 85);
-  height: 25px;
-  width: 25%;
-  float: left;
-  margin: 10px;
-  margin-top: 0;
-  display: block;
+.nav .publicaciones:hover::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: rgb(220, 1, 85);
+  bottom: -3px;
+  width: 103px;
+  transition-duration: 0.5s;
 }
 
-.navegacion a:link {
-  vertical-align: middle;
-  text-decoration: none;
-  color: #F4F3F8;
+.nav .sobre_nosotros {
+  width: 130px;
+  color: #333333;
+  position: absolute;
+  top: 0px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: 1;
+  right: 5px;
+  text-align: left;
 }
 
-.navegacion a:visited {
-  vertical-align: middle;
-  text-decoration: none;
-  color: #F4F3F8;
+.nav .sobre_nosotros::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: #F4F3F8;
+  bottom: -3px;
+  width: 108px;
+  transition-duration: 0.5s;
+}
+
+.nav .sobre_nosotros:hover::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: rgb(220, 1, 85);
+  bottom: -3px;
+  width: 108px;
+  transition-duration: 0.5s;
+}
+
+#titulo_principal {
+  max-width: 671px;
+  color: rgb(220, 1, 85);
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-family: Bebas Neue;
+  font-size: 5vmax;
+  opacity: 1;
+  text-align: left;
 }/*# sourceMappingURL=publicaciones.css.map */
