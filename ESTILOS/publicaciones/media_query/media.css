@@ -11,6 +11,7 @@
   width: 45vh;
   height: 55vh;
   background-color: rgb(220, 1, 85);
+  z-index: 2;
 }
 
 /*Estilos de los li del menú*/
@@ -27,10 +28,6 @@
 .checkbox:checked ~ .nav {
   right: 0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
   display: flex;
-}
-
-.checkbox:checked ~ .titulo {
-  visibility: hidden;
 }
 
 header .nav .inicio {
@@ -130,4 +127,142 @@ header .nav .sobre_nosotros {
   bottom: -3px;
   width: 108px;
   transition-duration: 0.5s;
+}
+
+.navegacion {
+  position: absolute;
+  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#items_navegacion1 {
+  color: #F4F3F8;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  background-color: rgb(220, 1, 85);
+  height: 25px;
+  width: 25%;
+  float: left;
+  margin: 10px;
+  margin-top: 0;
+  display: block;
+}
+
+#items_navegacion2 {
+  color: #F4F3F8;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  background-color: rgb(220, 1, 85);
+  height: 25px;
+  width: 25%;
+  float: left;
+  margin: 10px;
+  margin-top: 0;
+  display: block;
+}
+
+#items_navegacion3 {
+  color: #F4F3F8;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  background-color: rgb(220, 1, 85);
+  height: 25px;
+  width: 25%;
+  float: left;
+  margin: 10px;
+  margin-top: 0;
+  display: block;
+}
+
+#items_navegacion4 {
+  color: #F4F3F8;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  background-color: rgb(220, 1, 85);
+  height: 25px;
+  width: 25%;
+  float: left;
+  margin: 10px;
+  margin-top: 0;
+  display: block;
+}
+
+.navegacion a:link {
+  vertical-align: middle;
+  text-decoration: none;
+  color: #F4F3F8;
+}
+
+.navegacion a:visited {
+  vertical-align: middle;
+  text-decoration: none;
+  color: #F4F3F8;
+}
+
+.elementos_aside {
+  display: block;
+  background-color: rgb(220, 1, 85);
+  height: 100%;
+  float: right;
+  margin-top: 250px;
+  width: 25%;
+}
+
+.elementos_aside #titulo_aside {
+  margin-left: 25px;
+  font-family: roboto;
+  color: #F4F3F8;
+}
+
+.elementos_aside #podcast #doly {
+  position: relative;
+  left: 8%;
+  width: 85%;
+  max-width: 348px;
+  max-height: 196px;
+}
+
+.divisores_aside {
+  opacity: 0.8;
+  color: rgb(220, 1, 85);
+  width: 92%;
+}
+
+.texto_aside {
+  margin: 5px;
+}
+
+.posts {
+  position: absolute;
+  margin-top: 255px;
+}
+
+.publicaciones1 {
+  width: 50%;
+  height: auto;
+  margin: 10px 0 0 30px;
+}
+
+.publicaciones2 {
+  width: 50%;
+  height: auto;
+  margin: 10px 0 0 30px;
+}
+
+.publicaciones3 {
+  width: 50%;
+  height: auto;
+  margin: 10px 0 0 30px;
+}
+
+.posts .publicaciones #imagenes_posts {
+  width: 80%;
+  max-width: 466px;
+  max-height: 316px;
 }/*# sourceMappingURL=media.css.map */

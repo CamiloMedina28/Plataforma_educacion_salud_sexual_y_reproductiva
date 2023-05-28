@@ -3,13 +3,9 @@ $color_de_fondo: #F4F3F8;
 $color_letras: #333333;
 $color_titulo:  rgba(220,1,85,1);
 
-//colores del documento 
-$color_de_fondo: #F4F3F8;
-$color_letras: #333333;
-$color_titulo:  rgba(220,1,85,1);
-
 //fuentes
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 // mixins
@@ -155,6 +151,7 @@ nav a:visited {
     background-color: $color_titulo;
     font-family: Bebas Neue;
     font-size: 2vmax;
+    z-index: 1;
 }
   
 .quienes_somos .imagen {

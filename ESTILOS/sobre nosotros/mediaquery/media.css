@@ -11,6 +11,7 @@
   width: 45vh;
   height: 55vh;
   background-color: rgb(220, 1, 85);
+  z-index: 2;
 }
 
 /*Estilos de los li del menú*/

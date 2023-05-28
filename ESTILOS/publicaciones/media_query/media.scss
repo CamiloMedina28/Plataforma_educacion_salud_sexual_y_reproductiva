@@ -6,6 +6,20 @@ $color_titulo:  rgba(220,1,85,1);
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+
+@mixin items_navegacion($top, $width){
+    color: $color_de_fondo;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: center;
+    background-color: $color_titulo;
+    height:25px;
+	width:$width;
+	float:left;
+    margin: 10px;
+    margin-top: $top;
+    display: block;
+}
 @mixin elementos_del_menu($width, $top){
     right: 250px;
     color:$color_de_fondo;
@@ -27,6 +41,12 @@ $color_titulo:  rgba(220,1,85,1);
     width: $width;
     transition-duration: 0.5s;
 }
+@mixin publicaciones(){
+    width: 50%;
+    height: auto;
+    margin: 10px 0 0 30px;
+}
+
 
 .nav {
     margin-top: 3rem;
@@ -38,6 +58,7 @@ $color_titulo:  rgba(220,1,85,1);
     width:45vh;
     height:55vh;
     background-color: $color_titulo;
+    z-index: 2;
 }
 /*Estilos de los li del menú*/
 
@@ -53,10 +74,6 @@ $color_titulo:  rgba(220,1,85,1);
     right:0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
     display: flex;
 }
-.checkbox:checked ~ .titulo{
-    visibility: hidden;
-}
-
 
 header .nav .inicio{
     @include elementos_del_menu(40px, 50px);
@@ -87,3 +104,96 @@ header .nav .sobre_nosotros{
 .nav .sobre_nosotros:hover::before{
     @include seudoclase_menu (108px, $color_titulo);
 }
+
+
+
+
+.navegacion{
+    position: absolute;
+    margin-top: 200px;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+
+#items_navegacion1{
+    @include items_navegacion(0,25%);
+}
+#items_navegacion2{
+    @include items_navegacion(0,25%);
+}
+#items_navegacion3{
+    @include items_navegacion(0,25%);
+}
+#items_navegacion4{
+    @include items_navegacion(0,25%);
+}
+
+.navegacion a:link {
+    vertical-align: middle;
+    text-decoration: none;
+    color: $color_de_fondo;
+}
+
+.navegacion a:visited {
+    vertical-align: middle;
+    text-decoration: none;
+    color: $color_de_fondo;
+}
+
+.elementos_aside{
+    display: block;
+    background-color: $color_titulo;
+    height: 100%;
+    float: right;
+    margin-top: 250px;
+    width: 25%;
+}
+
+
+.elementos_aside #titulo_aside{
+    margin-left: 25px;
+    font-family: roboto;
+    color: $color_de_fondo;
+}
+
+.elementos_aside #podcast #doly{
+    position: relative;
+    left: 8%;
+    width: 85%;
+    max-width: 348px;
+    max-height: 196px;
+}
+
+.divisores_aside{
+    opacity: 0.8;
+    color: $color_titulo;
+    width: 92%;
+}
+
+.texto_aside{
+    margin: 5px;
+}
+
+
+.posts{
+    position: absolute;
+    margin-top: 255px;
+}
+.publicaciones1{
+    @include publicaciones();
+}
+.publicaciones2{
+    @include publicaciones();
+}
+.publicaciones3{
+    @include publicaciones();
+}
+
+.posts .publicaciones #imagenes_posts{
+    width: 80%;
+    max-width: 466px;
+    max-height: 316px;
+}
+

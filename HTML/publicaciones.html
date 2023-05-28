@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../IMAGENES/Logos/logo (1).png">
-    <link rel="stylesheet" href="../ESTILOS/publicaciones/publicaciones.css">
-    <link rel="stylesheet" href="../ESTILOS/publicaciones/media_query/media.css" media="screen and (max-width: 768px)">
     <title>Publicaciones</title>
+    <link rel="shortcut icon" href="../IMAGENES/Logos/logo (1).png">
+    <link href="../ESTILOS/publicaciones/publicaciones.css" rel="stylesheet" type="text/css">
+    <link href="../ESTILOS/publicaciones/media_query/media.css" rel="stylesheet" type="text/css" media="screen and (max-width: 768px)">
 </head>
 <body>
+    
     <header>
         <span class="titulo">SexSmart</span>
         <input type="checkbox" class="checkbox" id="menu-toogle">
@@ -20,18 +21,88 @@
             <a class="sobre_nosotros" href="../HTML/sobre nosotros.html">Sobre nosotros</a>
         </nav>
     </header>
-
+    
     <main>
-        <h1 id="titulo_principal">Publicaciones</h1>
+        <h1 id="titulo_principal">PUBLICACIONES</h1>
+       
+    
+        <article class="elementos_de_la_navegacion">
+            <section class="navegacion">
+                <div id="items_navegacion1">
+                    <span><a href="../PUBLICACIONES/elementos_navegacion/campus.html">Campus</a></span>
+                </div>
+        
+                <div id="items_navegacion2">
+                    <span><a href="../PUBLICACIONES/elementos_navegacion/nacionales.html">Nacionales</a></span>
+                </div>
+        
+                <div id="items_navegacion3">
+                    <span><a href="../PUBLICACIONES/elementos_navegacion/internacionales.html">Internacionales</a></span>
+                </div>
+        
+                <div id="items_navegacion4">
+                    <span><a href="../PUBLICACIONES/elementos_navegacion/historia.html">Historia</a></span>
+                </div>
+            </section>
+        </article>
+
         <article>
-            <section class="elementos_navergacion">
-                <a href="../PUBLICACIONES/elementos_navegacion/campus.html">CAMPUS</a>
-                <a href="../PUBLICACIONES/elementos_navegacion/historia.html">HISTORIA</a>
-                <a href="../PUBLICACIONES/elementos_navegacion/internacionales.html">INTERNACIONALES</a>
-                <a href="../PUBLICACIONES/elementos_navegacion/nacionales.html">NACIONALES</a>
+            <section class="posts">
+                <div class="publicaciones1">
+                    <img id="imagenes_posts" src="../IMAGENES/Publicaciones/img1.png"  alt="imagen de referencia">
+                    <p id="titular">
+                        Los Estados deben garantizar el acceso a anticonceptivos seguros y eficaces
+                    </p>
+                </div>
+                <hr color="rgba(220,1,85,1)" width="100%">
+                <div class="publicaciones2">
+                    <img id="imagenes_posts" src="../IMAGENES/Publicaciones/image 2.png"   alt="imagen de referencia">
+                    <p id="titular">
+                        El asombroso número de embarazos no deseados revela un fracaso en el respeto de los derechos de las mujeres
+                    </p>
+                </div>
+                <hr color=rgba(220,1,85,1) width="100%">
+                <div class="publicaciones3">
+                    <img id="imagenes_posts" src="../IMAGENES/Publicaciones/image 3.png" alt="imagen de referencia">
+                    <p id="titular">
+                        Es urgente restablecer los servicios de salud sexual y reproductiva perdidos con la pandemia de COVID-19
+                    </p>
+                </div>
             </section>
         </article>
     </main>
     
+
+    <aside class="elementos_aside">
+        <div id="podcast">
+            <h3 id="titulo_aside">PODCAST</h3>
+            <a href="#"><img id="doly" src="../IMAGENES/Publicaciones/doly.png" alt="doly"></a>
+        </div>
+        <hr class="divisores_aside">
+
+        <div>
+            <h3 id="titulo_aside"> 25 de marzo</h3>
+            <p class="texto_aside">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 A rerum qui enim nobis? Expedita, veniam? Incidunt expedita dicta 
+                 laboriosam eius facilis! Molestias eaque alias sapiente at maxime 
+                 tenetur doloremque doloribus.
+            </p>
+        </div>
+
+        <hr  class="divisores_aside">
+
+        <div>
+            <h3 id="titulo_aside"> 25 de marzo</h3>
+            <p class="texto_aside">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 A rerum qui enim nobis? Expedita, veniam? Incidunt expedita dicta 
+                 laboriosam eius facilis! Molestias eaque alias sapiente at maxime 
+                 tenetur doloremque doloribus.
+            </p>
+        </div>
+    </aside>
+
+    <footer>
+
+    </footer>
 </body>
 </html>
