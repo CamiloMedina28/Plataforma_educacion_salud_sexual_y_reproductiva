@@ -50,8 +50,20 @@ $color_titulo:  rgba(220,1,85,1);
     height: auto;
     margin: 10px 0 0 30px;
 }
-
-
+@mixin titulares_noticias(){
+    font-family: Roboto
+}
+@mixin leer_mas(){
+    display: block;
+    width: 100px;
+    font-family: Roboto;
+    font-size: 20px;
+    color: $color_de_fondo;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $color_titulo;
+}
 body{
     width: 100%;
     position: relative;
@@ -246,11 +258,23 @@ nav a:visited {
 .publicaciones3{
     @include publicaciones();
 }
-
 .posts .publicaciones #imagenes_posts{
     width: 80%;
+    object-fit: cover;
     max-width: 466px;
     max-height: 316px;
 }
+.divisor{
+    opacity: 1;
+    border-color: $color_titulo;
+    width: 80%;
+    float: left;
+}
 
+.posts .publicaciones1 .titular{@include titulares_noticias();}
+.posts .publicaciones2 .titular{@include titulares_noticias();}
+.posts .publicaciones3 .titular{@include titulares_noticias();}
+.posts .publicaciones1 .leer_mas{@include leer_mas();}
+.posts .publicaciones2 .leer_mas{@include leer_mas();}
+.posts .publicaciones3 .leer_mas{@include leer_mas();}
 

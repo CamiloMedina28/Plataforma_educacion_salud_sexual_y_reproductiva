@@ -319,6 +319,63 @@ nav a:visited {
 
 .posts .publicaciones #imagenes_posts {
   width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: 466px;
   max-height: 316px;
+}
+
+.divisor {
+  opacity: 1;
+  border-color: rgb(220, 1, 85);
+  width: 80%;
+  float: left;
+}
+
+.posts .publicaciones1 .titular {
+  font-family: Roboto;
+}
+
+.posts .publicaciones2 .titular {
+  font-family: Roboto;
+}
+
+.posts .publicaciones3 .titular {
+  font-family: Roboto;
+}
+
+.posts .publicaciones1 .leer_mas {
+  display: block;
+  width: 100px;
+  font-family: Roboto;
+  font-size: 20px;
+  color: #F4F3F8;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  background-color: rgb(220, 1, 85);
+}
+
+.posts .publicaciones2 .leer_mas {
+  display: block;
+  width: 100px;
+  font-family: Roboto;
+  font-size: 20px;
+  color: #F4F3F8;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  background-color: rgb(220, 1, 85);
+}
+
+.posts .publicaciones3 .leer_mas {
+  display: block;
+  width: 100px;
+  font-family: Roboto;
+  font-size: 20px;
+  color: #F4F3F8;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  background-color: rgb(220, 1, 85);
 }/*# sourceMappingURL=publicaciones.css.map */

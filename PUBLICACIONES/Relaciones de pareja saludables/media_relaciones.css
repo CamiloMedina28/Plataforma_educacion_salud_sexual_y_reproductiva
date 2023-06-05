@@ -21,11 +21,13 @@
 }
 
 .checkbox {
-  display: none; /*Ocultamos el checkbox pues no nos interesa que se vea*/
+  display: none;
+  /*Ocultamos el checkbox pues no nos interesa que se vea*/
 }
 
 .checkbox:checked ~ .nav {
-  right: 0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
+  right: 0px;
+  /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
   display: flex;
 }
 
@@ -128,115 +130,7 @@ header .nav .sobre_nosotros {
   transition-duration: 0.5s;
 }
 
-.navegacion {
-  position: absolute;
-  margin-top: 200px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.navegacion #items_navegacion1 {
-  color: #F4F3F8;
-  text-transform: uppercase;
-  vertical-align: middle;
-  text-align: center;
-  background-color: rgb(220, 1, 85);
-  height: 25px;
-  width: 100%;
-  float: left;
-  margin: 10px;
-  margin-top: 0px;
-  display: block;
-  position: inherit;
-}
-
-.navegacion #items_navegacion2 {
-  color: #F4F3F8;
-  text-transform: uppercase;
-  vertical-align: middle;
-  text-align: center;
-  background-color: rgb(220, 1, 85);
-  height: 25px;
-  width: 100%;
-  float: left;
-  margin: 10px;
-  margin-top: 30px;
-  display: block;
-  position: inherit;
-}
-
-.navegacion #items_navegacion3 {
-  color: #F4F3F8;
-  text-transform: uppercase;
-  vertical-align: middle;
-  text-align: center;
-  background-color: rgb(220, 1, 85);
-  height: 25px;
-  width: 100%;
-  float: left;
-  margin: 10px;
-  margin-top: 60px;
-  display: block;
-  position: inherit;
-}
-
-.navegacion #items_navegacion4 {
-  color: #F4F3F8;
-  text-transform: uppercase;
-  vertical-align: middle;
-  text-align: center;
-  background-color: rgb(220, 1, 85);
-  height: 25px;
-  width: 100%;
-  float: left;
-  margin: 10px;
-  margin-top: 90px;
-  display: block;
-  position: inherit;
-}
-
-.navegacion a:link {
-  vertical-align: middle;
-  text-decoration: none;
-  color: #F4F3F8;
-}
-
-.navegacion a:visited {
-  vertical-align: middle;
-  text-decoration: none;
-  color: #F4F3F8;
-}
-
-.elementos_aside {
-  visibility: hidden;
-}
-
-.posts {
-  position: absolute;
-  margin-top: 350px;
-}
-
-.publicaciones1 {
-  width: 50%;
-  height: auto;
-  margin: 10px 0 0 30px;
-}
-
-.publicaciones2 {
-  width: 50%;
-  height: auto;
-  margin: 10px 0 0 30px;
-}
-
-.publicaciones3 {
-  width: 50%;
-  height: auto;
-  margin: 10px 0 0 30px;
-}
-
-.posts .publicaciones #imagenes_posts {
-  width: 80%;
-  max-width: 466px;
-  max-height: 316px;
-}/*# sourceMappingURL=media.css.map */
+.contenedor img {
+  float: none;
+  width: 90%;
+}/*# sourceMappingURL=media_relaciones.css.map */

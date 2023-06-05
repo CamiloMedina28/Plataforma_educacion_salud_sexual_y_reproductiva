@@ -1,0 +1,214 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+body {
+  width: 100%;
+  position: relative;
+  background-color: #F4F3F8;
+  font-size: 16px;
+}
+
+.titulo {
+  max-width: 671px;
+  color: rgb(220, 1, 85);
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  font-family: Poppins;
+  font-size: 2vmax;
+  opacity: 1;
+  text-align: left;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  height: 158px;
+  top: 10px;
+  margin-right: 5px;
+  position: relative;
+  display: flex;
+  height: inherit;
+  flex-direction: row;
+  background-color: #F4F3F8;
+}
+
+.menu-toogle {
+  position: absolute;
+  /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
+  width: 35px;
+  line-height: 1.1;
+  text-align: center;
+  top: 6.5px;
+  /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
+  right: 8px;
+  border-radius: 3px;
+  background-color: rgb(220, 1, 85);
+}
+
+/*Añadimos la haburguesa y le damos unos estilos*/
+.menu-toogle::before {
+  content: "";
+}
+
+.checkbox {
+  display: block;
+}
+
+nav a:link {
+  text-decoration: none;
+  color: #333333;
+}
+
+nav a:visited {
+  text-decoration: none;
+  color: #333333;
+}
+
+.nav .inicio {
+  width: 40px;
+  color: #333333;
+  position: absolute;
+  top: 0px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: 1;
+  right: 315px;
+  text-align: left;
+}
+
+.nav .inicio::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: #F4F3F8;
+  bottom: -3px;
+  width: 36px;
+  transition-duration: 0.5s;
+}
+
+.nav .inicio:hover::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: rgb(220, 1, 85);
+  bottom: -3px;
+  width: 36px;
+  transition-duration: 0.5s;
+}
+
+.nav .publicaciones {
+  width: 115px;
+  color: #333333;
+  position: absolute;
+  top: 0px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: 1;
+  right: 165px;
+  text-align: left;
+}
+
+.nav .publicaciones::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: #F4F3F8;
+  bottom: -3px;
+  width: 103px;
+  transition-duration: 0.5s;
+}
+
+.nav .publicaciones:hover::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: rgb(220, 1, 85);
+  bottom: -3px;
+  width: 103px;
+  transition-duration: 0.5s;
+}
+
+.nav .sobre_nosotros {
+  width: 130px;
+  color: #333333;
+  position: absolute;
+  top: 0px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: 1;
+  right: 5px;
+  text-align: left;
+}
+
+.nav .sobre_nosotros::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: #F4F3F8;
+  bottom: -3px;
+  width: 108px;
+  transition-duration: 0.5s;
+}
+
+.nav .sobre_nosotros:hover::before {
+  position: absolute;
+  content: "";
+  border: solid;
+  border-color: rgb(220, 1, 85);
+  bottom: -3px;
+  width: 108px;
+  transition-duration: 0.5s;
+}
+
+h1 {
+  font-size: 5vmax;
+  margin: 25px 0 0 25px;
+  color: rgb(220, 1, 85);
+  font-family: Bebas Neue;
+}
+
+p {
+  font-family: Roboto;
+  width: 90%;
+  margin: 0 0 0 25px;
+}
+
+h2 {
+  margin: 0 0 0 25px;
+  color: rgb(220, 1, 85);
+  font-size: 2.5vmax;
+}
+
+a:link {
+  font-family: Roboto;
+  margin: 0 0 0 25px;
+}
+
+a:visited {
+  margin: 0 0 0 25px;
+  font-family: Roboto;
+}
+
+img {
+  margin: 0 0 0 25px;
+}
+
+.contenedor {
+  display: inline-block;
+}
+
+.contenedor img {
+  float: left;
+}
+
+li {
+  font-family: Roboto;
+}/*# sourceMappingURL=relaciones.css.map */

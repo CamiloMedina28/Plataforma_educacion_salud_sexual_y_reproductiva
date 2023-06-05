@@ -1,0 +1,196 @@
+//colores del documento 
+$color_de_fondo: #F4F3F8;
+$color_letras: #333333;
+$color_titulo: rgba(220, 1, 85, 1);
+
+//fuentes
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+// mixins
+@mixin elementos_del_menu($width, $right) {
+    width: $width;
+    color: $color_letras;
+    position: absolute;
+    top: 0px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1rem;
+    opacity: 1;
+    right: $right;
+    text-align: left;
+}
+
+@mixin items_navegacion($top, $width) {
+    color: $color_de_fondo;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: center;
+    background-color: $color_titulo;
+    height: 25px;
+    width: $width;
+    float: left;
+    margin: 10px;
+    margin-top: $top;
+    display: block;
+}
+
+@mixin seudoclase_menu ($width, $color) {
+    position: absolute;
+    content: '';
+    border: solid;
+    border-color: $color;
+    bottom: -3px;
+    width: $width;
+    transition-duration: 0.5s;
+}
+
+body {
+    width: 100%;
+    position: relative;
+    background-color: $color_de_fondo;
+    font-size: 16px;
+}
+
+.titulo {
+    max-width: 671px;
+    color: $color_titulo;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    font-family: Poppins;
+    font-size: 2vmax;
+    opacity: 1;
+    text-align: left;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    height: 158px;
+    top: 10px;
+    margin-right: 5px;
+    position: relative;
+    display: flex;
+    height: inherit;
+    flex-direction: row;
+    background-color: $color_de_fondo;
+}
+
+.menu-toogle {
+    position: absolute;
+    /*Lo posicionamos absolutamente para poder darle una posición y poder moverlo según el menú esté abierto o cerrado*/
+    width: 35px;
+    line-height: 1.1;
+    text-align: center;
+    top: 6.5px;
+    /*Le damos una posición top y left en donde queramos que se encuentre la hamburguesa del menú*/
+    right: 8px;
+    border-radius: 3px;
+    background-color: $color_titulo;
+}
+
+/*Añadimos la haburguesa y le damos unos estilos*/
+.menu-toogle::before {
+    content: "";
+}
+
+.checkbox {
+    display: block;
+}
+
+nav a:link {
+    text-decoration: none;
+    color: $color_letras;
+}
+
+nav a:visited {
+    text-decoration: none;
+    color: $color_letras;
+}
+
+.nav .inicio {
+    @include elementos_del_menu(40px, 315px);
+}
+
+.nav .inicio::before {
+    @include seudoclase_menu(36px, $color_de_fondo);
+}
+
+.nav .inicio:hover::before {
+    @include seudoclase_menu(36px, $color_titulo);
+}
+
+.nav .publicaciones {
+    @include elementos_del_menu(115px, 165px);
+}
+
+.nav .publicaciones::before {
+    @include seudoclase_menu (103px, $color_de_fondo);
+}
+
+.nav .publicaciones:hover::before {
+    @include seudoclase_menu (103px, $color_titulo);
+}
+
+.nav .sobre_nosotros {
+    @include elementos_del_menu(130px, 5px);
+}
+
+.nav .sobre_nosotros::before {
+    @include seudoclase_menu (108px, $color_de_fondo);
+}
+
+.nav .sobre_nosotros:hover::before {
+    @include seudoclase_menu (108px, $color_titulo);
+}
+
+h1 {
+    font-size: 5vmax;
+    margin: 25px 0 0 25px;
+    color: $color_titulo;
+    font-family: Bebas Neue;
+}
+
+p {
+    font-family: Roboto;
+    width: 90%;
+    margin: 0 0 0 25px;
+
+}
+
+h2 {
+    margin: 0 0 0 25px;
+    color: $color_titulo;
+    font-size: 2.5vmax;
+}
+
+a:link {
+    font-family: Roboto;
+    margin: 0 0 0 25px;
+}
+
+a:visited {
+    margin: 0 0 0 25px;
+    font-family: Roboto;
+}
+
+img {
+    margin: 0 0 0 25px;
+}
+
+.contenedor {
+    display: inline-block;
+}
+
+.contenedor img {
+    float: left;
+}
+
+li{
+    font-family: Roboto;
+}

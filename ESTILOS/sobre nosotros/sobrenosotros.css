@@ -198,19 +198,147 @@ nav a:visited {
 
 .quienes_somos .texto {
   padding: 15px;
+  color: #F4F3F8;
 }
 
-.imagenes_nuestras {
-  width: 85%;
-  margin: 35% 50%;
-  transform: translate(-50%);
+@media screen and (min-width: 1000px) {
+  .contenedor_grid_imagenes {
+    margin-top: 500px;
+    place-content: center;
+  }
 }
-
 .contenedor_grid_imagenes {
+  place-content: center;
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
   grid-template-rows: auto auto;
   -moz-column-gap: 5vmax;
        column-gap: 5vmax;
   row-gap: 5vmax;
+}
+
+.contenedor_grid_imagenes #img1 {
+  max-width: 128px;
+  max-height: 105px;
+  width: 128px;
+  height: auto;
+  justify-self: center;
+}
+
+.contenedor_grid_imagenes #img2 {
+  max-width: 128px;
+  max-height: 105px;
+  width: 128px;
+  height: auto;
+  justify-self: center;
+}
+
+.contenedor_grid_imagenes #img3 {
+  max-width: 128px;
+  max-height: 105px;
+  width: 128px;
+  height: auto;
+  justify-self: center;
+}
+
+.contenedor_grid_imagenes #img4 {
+  max-width: 128px;
+  max-height: 105px;
+  width: 128px;
+  height: auto;
+  justify-self: center;
+}
+
+.contenedor_grid_imagenes #img5 {
+  max-width: 128px;
+  max-height: 105px;
+  width: 128px;
+  height: auto;
+  justify-self: center;
+}
+
+.contenedor_grid_imagenes #img6 {
+  max-width: 128px;
+  max-height: 105px;
+  width: 128px;
+  height: auto;
+  justify-self: center;
+}
+
+.contenedor_grid_imagenes #img7 {
+  max-width: 128px;
+  max-height: 105px;
+  width: 128px;
+  height: auto;
+  justify-self: center;
+}
+
+.contenedor_grid_imagenes #img8 {
+  max-width: 128px;
+  max-height: 105px;
+  width: 128px;
+  height: auto;
+  justify-self: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .contenedor_grid_imagenes {
+    margin-top: 350px;
+  }
+  .contenedor_grid_imagenes #img1 {
+    max-width: 128px;
+    max-height: 105px;
+    width: 120px;
+    height: auto;
+    justify-self: center;
+  }
+  .contenedor_grid_imagenes #img2 {
+    max-width: 128px;
+    max-height: 105px;
+    width: 120px;
+    height: auto;
+    justify-self: center;
+  }
+  .contenedor_grid_imagenes #img3 {
+    max-width: 128px;
+    max-height: 105px;
+    width: 120px;
+    height: auto;
+    justify-self: center;
+  }
+  .contenedor_grid_imagenes #img4 {
+    max-width: 128px;
+    max-height: 105px;
+    width: 120px;
+    height: auto;
+    justify-self: center;
+  }
+  .contenedor_grid_imagenes #img5 {
+    max-width: 128px;
+    max-height: 105px;
+    width: 120px;
+    height: auto;
+    justify-self: center;
+  }
+  .contenedor_grid_imagenes #img6 {
+    max-width: 128px;
+    max-height: 105px;
+    width: 120px;
+    height: auto;
+    justify-self: center;
+  }
+  .contenedor_grid_imagenes #img7 {
+    max-width: 128px;
+    max-height: 105px;
+    width: 120px;
+    height: auto;
+    justify-self: center;
+  }
+  .contenedor_grid_imagenes #img8 {
+    max-width: 128px;
+    max-height: 105px;
+    width: 120px;
+    height: auto;
+    justify-self: center;
+  }
 }/*# sourceMappingURL=sobrenosotros.css.map */

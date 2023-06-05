@@ -2,11 +2,12 @@
 $color_de_fondo: #F4F3F8;
 $color_letras: #333333;
 $color_titulo:  rgba(220,1,85,1);
+
 //fuentes
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-
+//mixins
 @mixin items_navegacion($top, $width){
     color: $color_de_fondo;
     text-transform: uppercase;
@@ -19,7 +20,9 @@ $color_titulo:  rgba(220,1,85,1);
     margin: 10px;
     margin-top: $top;
     display: block;
+    position: inherit;
 }
+
 @mixin elementos_del_menu($width, $top){
     right: 250px;
     color:$color_de_fondo;
@@ -32,6 +35,7 @@ $color_titulo:  rgba(220,1,85,1);
     opacity: 1;
     text-align: left;
 }
+
 @mixin seudoclase_menu ($width, $color){
     position: absolute;
     content: '';
@@ -41,12 +45,12 @@ $color_titulo:  rgba(220,1,85,1);
     width: $width;
     transition-duration: 0.5s;
 }
+
 @mixin publicaciones(){
     width: 50%;
     height: auto;
     margin: 10px 0 0 30px;
 }
-
 
 .nav {
     margin-top: 3rem;
@@ -55,21 +59,22 @@ $color_titulo:  rgba(220,1,85,1);
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width:45vh;
-    height:55vh;
+    width:100%;
+    height:500px;
     background-color: $color_titulo;
     z-index: 2;
 }
-/*Estilos de los li del menú*/
 
 .menu-toogle::before {
     content:"☰";
     font-size:32px;
     color:$color_de_fondo;
 }
+
 .checkbox {
     display:none; /*Ocultamos el checkbox pues no nos interesa que se vea*/
 }
+
 .checkbox:checked ~ .nav {
     right:0px; /*Le quitamos el left negativo para que el menú vuelva a su posición original*/
     display: flex;
@@ -105,9 +110,6 @@ header .nav .sobre_nosotros{
     @include seudoclase_menu (108px, $color_titulo);
 }
 
-
-
-
 .navegacion{
     position: absolute;
     margin-top: 200px;
@@ -116,18 +118,17 @@ header .nav .sobre_nosotros{
     justify-content: space-between;
 }
 
-
-#items_navegacion1{
-    @include items_navegacion(0,25%);
+.navegacion #items_navegacion1{
+    @include items_navegacion(0px,100%);
 }
-#items_navegacion2{
-    @include items_navegacion(0,25%);
+.navegacion #items_navegacion2{
+    @include items_navegacion(30px,100%);
 }
-#items_navegacion3{
-    @include items_navegacion(0,25%);
+.navegacion #items_navegacion3{
+    @include items_navegacion(60px,100%);
 }
-#items_navegacion4{
-    @include items_navegacion(0,25%);
+.navegacion #items_navegacion4{
+    @include items_navegacion(90px,100%);
 }
 
 .navegacion a:link {
@@ -143,43 +144,12 @@ header .nav .sobre_nosotros{
 }
 
 .elementos_aside{
-    display: block;
-    background-color: $color_titulo;
-    height: 100%;
-    float: right;
-    margin-top: 250px;
-    width: 25%;
+    visibility: hidden;
 }
-
-
-.elementos_aside #titulo_aside{
-    margin-left: 25px;
-    font-family: roboto;
-    color: $color_de_fondo;
-}
-
-.elementos_aside #podcast #doly{
-    position: relative;
-    left: 8%;
-    width: 85%;
-    max-width: 348px;
-    max-height: 196px;
-}
-
-.divisores_aside{
-    opacity: 0.8;
-    color: $color_titulo;
-    width: 92%;
-}
-
-.texto_aside{
-    margin: 5px;
-}
-
 
 .posts{
     position: absolute;
-    margin-top: 255px;
+    margin-top: 350px;
 }
 .publicaciones1{
     @include publicaciones();

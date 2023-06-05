@@ -31,9 +31,12 @@ $color_titulo:  rgba(220,1,85,1);
     width: $width;
     transition-duration: 0.5s;
 }
-@mixin imagenes(){
-    width: 128px;
-    height: 105px;
+@mixin imagenes($width){
+    max-width: 128px;
+    max-height: 105px;
+    width: $width;
+    height: auto;
+    justify-self: center;
 }
 
 body{
@@ -161,15 +164,16 @@ nav a:visited {
 
 .quienes_somos .texto{
     padding: 15px;
+    color: $color_de_fondo;
 }
-  
-.imagenes_nuestras{
-    width: 85%;
-    margin: 35% 50%;
-    transform: translate(-50%);
+@media  screen and (min-width: 1000px) {
+    .contenedor_grid_imagenes{
+        margin-top: 500px;
+        place-content: center;
+    }
 }
-
 .contenedor_grid_imagenes{
+    place-content: center;
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
     grid-template-rows: auto auto;
@@ -177,3 +181,57 @@ nav a:visited {
     row-gap: 5vmax;
 }
 
+.contenedor_grid_imagenes #img1{
+    @include imagenes(128px);
+}
+.contenedor_grid_imagenes #img2{
+    @include imagenes(128px);
+}
+.contenedor_grid_imagenes #img3{
+    @include imagenes(128px);
+}
+.contenedor_grid_imagenes #img4{
+    @include imagenes(128px);
+}
+.contenedor_grid_imagenes #img5{
+    @include imagenes(128px);
+}
+.contenedor_grid_imagenes #img6{
+    @include imagenes(128px);
+}
+.contenedor_grid_imagenes #img7{
+    @include imagenes(128px);
+}
+.contenedor_grid_imagenes #img8{
+    @include imagenes(128px);
+}
+
+@media screen and (max-width: 1000px){
+    .contenedor_grid_imagenes{
+        margin-top: 350px;
+    }
+    .contenedor_grid_imagenes #img1{
+        @include imagenes(120px);
+    }
+    .contenedor_grid_imagenes #img2{
+        @include imagenes(120px);
+    }
+    .contenedor_grid_imagenes #img3{
+        @include imagenes(120px);
+    }
+    .contenedor_grid_imagenes #img4{
+        @include imagenes(120px);
+    }
+    .contenedor_grid_imagenes #img5{
+        @include imagenes(120px);
+    }
+    .contenedor_grid_imagenes #img6{
+        @include imagenes(120px);
+    }
+    .contenedor_grid_imagenes #img7{
+        @include imagenes(120px);
+    }
+    .contenedor_grid_imagenes #img8{
+        @include imagenes(120px);
+    }
+}
