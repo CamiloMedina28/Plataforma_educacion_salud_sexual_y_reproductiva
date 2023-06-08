@@ -10,7 +10,7 @@
   justify-content: space-evenly;
   width: 100%;
   height: 500px;
-  background-color: rgb(220, 1, 85);
+  background-color: #dc0155;
   z-index: 2;
 }
 
@@ -48,7 +48,7 @@ header .nav .inicio {
   position: absolute;
   content: "";
   border: solid;
-  border-color: rgb(220, 1, 85);
+  border-color: #dc0155;
   bottom: -3px;
   width: 36px;
   transition-duration: 0.5s;
@@ -58,7 +58,7 @@ header .nav .inicio {
   position: absolute;
   content: "";
   border: solid;
-  border-color: rgb(220, 1, 85);
+  border-color: #dc0155;
   bottom: -3px;
   width: 36px;
   transition-duration: 0.5s;
@@ -81,7 +81,7 @@ header .nav .publicaciones {
   position: absolute;
   content: "";
   border: solid;
-  border-color: rgb(220, 1, 85);
+  border-color: #dc0155;
   bottom: -3px;
   width: 103px;
   transition-duration: 0.5s;
@@ -91,7 +91,7 @@ header .nav .publicaciones {
   position: absolute;
   content: "";
   border: solid;
-  border-color: rgb(220, 1, 85);
+  border-color: #dc0155;
   bottom: -3px;
   width: 103px;
   transition-duration: 0.5s;
@@ -114,7 +114,7 @@ header .nav .sobre_nosotros {
   position: absolute;
   content: "";
   border: solid;
-  border-color: rgb(220, 1, 85);
+  border-color: #dc0155;
   bottom: -3px;
   width: 108px;
   transition-duration: 0.5s;
@@ -124,7 +124,7 @@ header .nav .sobre_nosotros {
   position: absolute;
   content: "";
   border: solid;
-  border-color: rgb(220, 1, 85);
+  border-color: #dc0155;
   bottom: -3px;
   width: 108px;
   transition-duration: 0.5s;
@@ -133,4 +133,4 @@ header .nav .sobre_nosotros {
 .contenedor img {
   float: none;
   width: 90%;
-}/*# sourceMappingURL=media_derechos.css.map */
+}

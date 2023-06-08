@@ -2,13 +2,9 @@
     $servidor="sql213.epizy.com";
     $usuario="epiz_34286946";
     $clave="1Q43TQDk5ztorK";
-    $base_de_datos="epiz_34286946_preguntas_realizadas";
+    $base_de_datos="epiz_34286946_PREGUNTAS_USUARIOS";
 
-    $enlace = mysqli_connect($servidor, $usuario, $clave, $base_de_datos);
-
-    if(!enlace){
-        echo"error en la conexión con el servidor";
-    }
+    $enlace = mysqli_connect ($servidor, $usuario, $clave, $base_de_datos);
 
 ?>
 <!DOCTYPE html>
@@ -30,7 +26,7 @@
             <label for="menu-toogle" class="menu-toogle"></label>
             <nav class="barra_de_navegacion">
                 <div id="elementos_del_menu">
-                    <span id="inicio"><a href="../HTML/INICIO.html">Inicio</a></span> <!--Elementos de navegación-->
+                    <span id="inicio"><a href="../HTML/INICIO.php">Inicio</a></span> <!--Elementos de navegación-->
                     <span id="publicaciones"><a href="../HTML/publicaciones.html">Publicaciones</a></span> 
                     <span id="nosotros"><a href="../HTML/sobre nosotros.html">Sobre nosotros</a></span>
                 </div>
@@ -77,12 +73,10 @@
         <article>
             <section class="crear-cuenta">
                 <h1>¡Envíanos una pregunta!</h1>
-                <form action="" method="post">
-                    <label for="">
-                        <input type="text" placeholder="Nombre" class="cuenta__input" name="nombre">
-                        <input type="text" placeholder="Telefono" class="cuenta__input" name="telefono">
-                        <input type="email" placeholder="Correo" class="cuenta__input" name="email required ">
-                    </label>
+                <form action="#" method="post">
+                    <input type="text" placeholder="Nombre" class="cuenta__input" name="nombre">
+                    <input type="text" placeholder="Telefono" class="cuenta__input" name="telefono">
+                    <input type="email" placeholder="Correo" class="cuenta__input" name="email" required >
                     <br><br>
                     <textarea name="pregunta" rows="4" cols="20" placeholder="Ingresa tu pregunta"></textarea>
                     <br><br>
@@ -99,18 +93,14 @@
 </html>
 <?php
     if (isset($_POST['enviar'])){
-        $nombre = $_POST['nombre']
-        $telefono = $_POST['telefono']
-        $correo = $_POST['correo']
-        $pregunta = $_POST['pregunta']
 
-        $inserta_los_datos = "INSERT INTO preguntas VALUES('$Nombre', '$Teléfono', '$Correo', '$Pregunta')";
+        $nombre = $_POST ['nombre'];
+        $telefono = $_POST ['telefono'];
+        $correo = $_POST ['email'];
+        $pregunta = $_POST['pregunta'];
 
-        $ejecutar_la_insercion = mysqli_query($enlace, $insertar_los_datos);
+        $inserta_los_datos = "INSERT INTO preguntas_realizadas VALUES('$nombre', '$telefono', '$correo', '$pregunta')";
 
-        if($ejecutar_la_insercion){
-            echo"Ocurrión un error al enviar los datos a la base de datos";
-        }
+        $ejecutar_la_insercion = mysqli_query($enlace, $inserta_los_datos);
     }
-
 ?>
